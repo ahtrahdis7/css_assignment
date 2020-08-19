@@ -1,19 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>csstutorial</title>
+    <title>Css tutorial</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div>
-        <h2>Welcome to CSS Tutorial! <br> Let's have some fun</h2>
+    <div class="tab sidenav">
+        <a class="tablinks" onclick="openProperty(event, 'Home')" id="defaultOpen">Home</a>
+        <a class="tablinks" onclick="openProperty(event, 'Background')">Background</a>
+        <a class="tablinks" onclick="openProperty(event, 'Box Model')">Box Model</a>
+        <a class="tablinks" onclick="openProperty(event, 'Flex')">Flex</a>
+        <a class="tablinks" onclick="openProperty(event, 'Float')">Float</a>
+        <a class="tablinks" onclick="openProperty(event, 'Font')">Font</a>
+        <a class="tablinks" onclick="openProperty(event, 'Layout')">Layout</a>
+        <a class="tablinks" onclick="openProperty(event, 'Links')">Links</a>
+        <a class="tablinks" onclick="openProperty(event, 'Opacity')">Opacity</a>
+        <a class="tablinks" onclick="openProperty(event, 'Overflow')">Overflow</a>
+        <a class="tablinks" onclick="openProperty(event, 'Postion')">Postion</a>
+        <a class="tablinks" onclick="openProperty(event, 'Tables')">Tables</a>
+        <a class="tablinks" onclick="openProperty(event, 'Text Formatting')">Text Formatting</a>
     </div>
-    <div>
-        <div id="layout">
-            <link rel="import" href="props/syntax.html">
+    <div class="main">
+         <div id="Home" class="tabcontent">
+           <h1>Welcome to CSS Tutorial! <br> Let's have some fun</h1>
         </div>
+
+        <div id="Background" class="tabcontent">
+           <h1>backgound</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quisquam quod nemo repellendus magnam sequi sunt cum consectetur rerum molestiae!</p>
+        </div>
+
+        <div id="Box Model" class="tabcontent">
+            <h1>Box model</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum eum, quis soluta autem, voluptatem pariatur molestias quasi consectetur ipsam aut quidem eveniet placeat aliquid vero iure, ipsa quia ab.</p>
+        </div>
+
+        <div id="Flex" class="tabcontent">
+          <h1>Flex</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+          <div id="Float" class="tabcontent">
+          <h1>Float</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+
+        <div id="Font" class="tabcontent">
+          <h1>Font</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+
+        <div id="Layout" class="tabcontent">
+          <h1>Layout</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+        <div id="Links" class="tabcontent">
+          <h1>Links</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+        <div id="Opacity" class="tabcontent">
+          <h1>Opacity</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+          <div id="Overflow" class="tabcontent">
+          <h1>Overflow</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+        <div id="Postion" class="tabcontent">
+          <h1>Postion</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+        <div id="Tables" class="tabcontent">
+          <h1>Tables</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+         <div id="Text Formatting" class="tabcontent">
+          <h1>Text Formatting</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+        
     </div>
 
+    <script>
+        function openProperty(evt, PropertyName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(PropertyName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+
 </body>
+
 </html>

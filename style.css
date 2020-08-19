@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+	}
+}
+.tab {
+	height: 100%;
+	width: 15%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	overflow-x: ellipsis;
+}
+
+/* Style the buttons inside the tab */
+.tab a {
+	padding: 15px;
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+	display: block;
+	overflow: ellipsis;
+}
+
+/* Change background color of buttons on hover */
+.tab a:hover {
+	color: gray;
+	overflow-x: hidden;
+}
+
+/* Create an active/current "tab button" class */
+.tab a.active {
+	background-color: #ccc;
+	color: black;
+}
+
+/* Style the tab content */
+.tabcontent {
+	margin-left: 16%; /* to display sidenav */
+	font-size: 1.3em;
+	padding: 0px 10px;
+}
