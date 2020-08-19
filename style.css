@@ -2,8 +2,31 @@
 	box-sizing: border-box;
 }
 
+.themeComponent1{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 200px;
+	width: 200px;
+	border-top-left-radius: 200px;
+	background-color: rgb(179, 0, 104);
+}
+.themeComponent2{
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100px;
+	width: 100px;
+	border-bottom-left-radius: 100px;
+	background-color: rgb(179, 0, 104);
+}
+
 body {
-	font-family: "Lato", sans-serif;
+	font-family: 'Comic Neue', cursive;
+}
+
+h1{
+	color: rgb(179, 0, 104);
 }
 
 @media screen and (max-height: 450px) {
@@ -11,7 +34,7 @@ body {
 		padding-top: 15px;
 	}
 	.sidenav a {
-		font-size: 18px;
+		font-size: 15px;
 	}
 }
 .tab {
@@ -21,15 +44,15 @@ body {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #000;
+	background-color: rgb(179, 0, 104);
 	overflow-x: ellipsis;
 }
 
 /* Style the buttons inside the tab */
 .tab a {
-	padding: 15px;
+	padding: 10px;
 	text-decoration: none;
-	font-size: 25px;
+	font-size: 20px;
 	color: white;
 	display: block;
 	overflow: ellipsis;
@@ -37,14 +60,16 @@ body {
 
 /* Change background color of buttons on hover */
 .tab a:hover {
-	color: gray;
+	color: rgb(179, 0, 104);
 	overflow-x: hidden;
+	background-color: white;
+
 }
 
 /* Create an active/current "tab button" class */
 .tab a.active {
-	background-color: #ccc;
-	color: black;
+	background-color: white;
+	color: rgb(179, 0, 104);
 }
 
 /* Style the tab content */
