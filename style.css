@@ -10,9 +10,9 @@
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	height: 200px;
-	width: 200px;
-	border-top-left-radius: 200px;
+	height: 230px;
+	width: 15%;
+	border-top-left-radius: 230px;
 	background-color: #1e3f5a;
 }
 .themeComponent2{
@@ -83,4 +83,11 @@ h1{
 	margin-right: 16%;
 	font-size: 1.3em;
 	padding: 0px 10px;
+}
+
+.testimg{
+	width: 100%;
+	/* margin-top: 5%; */
+	border: dotted 1px #1e3f5a;
+	margin-bottom: 50px;
 }
