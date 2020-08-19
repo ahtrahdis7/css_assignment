@@ -13,7 +13,7 @@
 	height: 200px;
 	width: 200px;
 	border-top-left-radius: 200px;
-	background-color: rgb(179, 0, 104);
+	background-color: #1e3f5a;
 }
 .themeComponent2{
 	position: fixed;
@@ -22,7 +22,7 @@
 	height: 100px;
 	width: 100px;
 	border-bottom-left-radius: 100px;
-	background-color: rgb(179, 0, 104);
+	background-color: #1e3f5a;
 }
 
 body {
@@ -30,7 +30,7 @@ body {
 }
 
 h1{
-	color: rgb(179, 0, 104);
+	color: #1e3f5a;
 }
 
 @media screen and (max-height: 450px) {
@@ -48,7 +48,7 @@ h1{
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: rgb(179, 0, 104);
+	background-color: #1e3f5a;
 	overflow-x: ellipsis;
 }
 
@@ -56,6 +56,7 @@ h1{
 .tab a {
 	padding: 10px;
 	text-decoration: none;
+	font-weight: 600;
 	font-size: 20px;
 	color: white;
 	display: block;
@@ -64,7 +65,7 @@ h1{
 
 /* Change background color of buttons on hover */
 .tab a:hover {
-	color: rgb(179, 0, 104);
+	color: #1e3f5a;
 	overflow-x: hidden;
 	background-color: white;
 
@@ -73,7 +74,7 @@ h1{
 /* Create an active/current "tab button" class */
 .tab a.active {
 	background-color: white;
-	color: rgb(179, 0, 104);
+	color: #1e3f5a;
 }
 
 /* Style the tab content */
