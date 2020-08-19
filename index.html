@@ -15,29 +15,74 @@
     <div class="themeComponent2"></div>
 
     <div class="tab sidenav">
-        <img src='images/IIIT-BH_Official_Logo.png' style="width: 100%; height: 200; text-align: center;">
+        <img src='images/IIIT-BH_Official_Logo.png' style="width: 100%;  text-align: center;">
         <a class="tablinks" onclick="openProperty(event, 'Home')" id="defaultOpen">Home</a>
+        <a class="tablinks" onclick="openProperty(event, 'Syntax')">Syntax</a>
         <a class="tablinks" onclick="openProperty(event, 'Background')">Background</a>
-        <a class="tablinks" onclick="openProperty(event, 'Box Model')">Box Model</a>
-        <a class="tablinks" onclick="openProperty(event, 'Flex')">Flex</a>
-        <a class="tablinks" onclick="openProperty(event, 'Float')">Float</a>
-        <a class="tablinks" onclick="openProperty(event, 'Font')">Font</a>
-        <a class="tablinks" onclick="openProperty(event, 'Layout')">Layout</a>
-        <a class="tablinks" onclick="openProperty(event, 'Links')">Links</a>
-        <a class="tablinks" onclick="openProperty(event, 'Opacity')">Opacity</a>
-        <a class="tablinks" onclick="openProperty(event, 'Overflow')">Overflow</a>
-        <a class="tablinks" onclick="openProperty(event, 'Postion')">Postion</a>
-        <a class="tablinks" onclick="openProperty(event, 'Tables')">Tables</a>
         <a class="tablinks" onclick="openProperty(event, 'Text Formatting')">Text Formatting</a>
+        <a class="tablinks" onclick="openProperty(event, 'Display')">Display</a>
+        <a class="tablinks" onclick="openProperty(event, 'Tables')">Tables</a>
+        <a class="tablinks" onclick="openProperty(event, 'Postion')">Postion</a>
+        <a class="tablinks" onclick="openProperty(event, 'Overflow')">Overflow</a>
+        <a class="tablinks" onclick="openProperty(event, 'Image')">Image</a>
+        <a class="tablinks" onclick="openProperty(event, 'Box Model')">Box Model</a>
+        <a class="tablinks" onclick="openProperty(event, 'Layout')">Layout</a>
+        <a class="tablinks" onclick="openProperty(event, 'Combinators')">Combinators</a>
+        <a class="tablinks" onclick="openProperty(event, 'PseudoClass')">Pseudo Class</a>
+        <a class="tablinks" onclick="openProperty(event, 'Forms')">Forms</a>
+        <a class="tablinks" onclick="openProperty(event, 'ImageGallery')">Image Gallery</a>
+
+
     </div>
     <div class="main">
-         <div id="Home" class="tabcontent">
-           <h1>Welcome to CSS Tutorial! <br> Let's have some fun</h1>
+
+         <div id="Home" class="tabcontent home">
+           <h1><b>Welcome to CSS Tutorial!</b> <br> Let's have some fun</h1>
         </div>
 
+        <div id="Syntax" class="tabcontent">
+          <h1>Syntax and Units</h1>
+          <p>Cover "CSS selectors" </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quisquam quod nemo repellendus magnam sequi sunt cum consectetur rerum molestiae!</p>
+       </div>
+
         <div id="Background" class="tabcontent">
-           <h1>backgound</h1>
+           <h1>Background</h1>
+           <p>Discuss "Opacity" Here.</p>
            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quisquam quod nemo repellendus magnam sequi sunt cum consectetur rerum molestiae!</p>
+        </div>
+
+        <div id="Text Formatting" class="tabcontent">
+          <h1>Text Formatting and Links</h1>
+          <p>Cover "Font" Properties Here</p>
+        </div>
+
+        <div id="Display" class="tabcontent">
+          <h1>Display</h1>
+        <p>Cover  "Align"  "max-width".</p>
+        <p>"height" "width" "padding" "margin" "comments"</p>
+        </div>
+
+        <div id="Tables" class="tabcontent">
+          <h1>Tables</h1>
+          <p>Reference "tables.html"</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+
+        <div id="Postion" class="tabcontent">
+          <h1>Postion</h1>
+          <p>Cover "Dropdowns" and "attr selectors</p>
+        </div>
+
+        <div id="Overflow" class="tabcontent">
+          <h1>Overflow</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+
+        <div id="Image" class="tabcontent">
+          <h1>Image Properties and Display</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+            <p>Cover "Float Prop"</p>
         </div>
 
         <div id="Box Model" class="tabcontent">
@@ -45,49 +90,32 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum eum, quis soluta autem, voluptatem pariatur molestias quasi consectetur ipsam aut quidem eveniet placeat aliquid vero iure, ipsa quia ab.</p>
         </div>
 
-        <div id="Flex" class="tabcontent">
-          <h1>Flex</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
-        </div>
-          <div id="Float" class="tabcontent">
-          <h1>Float</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
-        </div>
-
-        <div id="Font" class="tabcontent">
-          <h1>Font</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
-        </div>
-
         <div id="Layout" class="tabcontent">
           <h1>Layout</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+          <p>Cover the "Navbar Properties" "Outline" </p>
         </div>
-        <div id="Links" class="tabcontent">
-          <h1>Links</h1>
+
+        <div id="Combinators" class="tabcontent">
+          <h1>Combinators</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
         </div>
-        <div id="Opacity" class="tabcontent">
-          <h1>Opacity</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
-        </div>
-          <div id="Overflow" class="tabcontent">
-          <h1>Overflow</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
-        </div>
-        <div id="Postion" class="tabcontent">
-          <h1>Postion</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
-        </div>
-        <div id="Tables" class="tabcontent">
-          <h1>Tables</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
-        </div>
-         <div id="Text Formatting" class="tabcontent">
-          <h1>Text Formatting</h1>
+
+        <div id="PseudoClass" class="tabcontent">
+          <h1>Pseudo Class and Elements</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
         </div>
         
+        <div id="Forms" class="tabcontent">
+          <h1>Forms</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+
+        <div id="ImageGallery" class="tabcontent">
+          <h1>Image Gallery</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+        </div>
+
     </div>
 
     <script>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet">
+    <style>
+        th{
+            width: 250px;
+            text-align: center;
+            border: solid 1px black;
+        }
+        td{
+            text-align: center;
+            border: solid 1px black;
+        }
+        tr{
+            border: solid 1px black;
+        }
+        table{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body style="font-family: 'Comic Neue', cursive;">
+    <div >
+        <br>
+        <h3>CSS Selectors Compatibility </h3><br>
+        <table >
+            <tr>
+                <th colspan="1"><strong>Selectors</strong></th>
+                <th colspan="4"><strong>IE</strong>></th>
+                <th colspan="3"><strong>Firefox</strong></th>
+                <th colspan="3"><strong>Safari</strong></th>
+                <th colspan="2"><strong>Chrome</strong></th>
+                <th colspan="2"><strong>Opera</strong></th>
+                <th colspan="1"><strong>Konquer</strong></th>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>5.5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>2</td>
+                <td>3.0</td>
+                <td>3.1</td>
+                <td>3.0</td>
+                <td>3.1</td>
+                <td>4.0</td>
+                <td>1</td>
+                <td>2</td>
+                <td>9.6</td>
+                <td>10</td>
+                <td>3.5.7</td>
+            </tr>
+
+            <tr>
+                <td colspan="1">*</td>
+                <td colspan="4">Yes</td>
+                <td colspan="3">Yes</td>
+                <td colspan="3">Yes</td>
+                <td colspan="2">Yes</td>
+                <td colspan="2">Yes</td>
+                <td colspan="1">Yes</td>
+            </tr>
+
+            <tr>
+                <td>></td>
+                <td colspan="2">No</td>
+                <td colspan="2">Yes</td>
+                <td colspan="3">Yes</td>
+                <td colspan="3">Yes</td>
+                <td colspan="2">Yes</td>
+                <td colspan="2">Yes</td>
+                <td colspan="1">Yes</td>
+            </tr>
+
+            <tr>
+                <td>+</td>
+                <td colspan="2">No</td>
+                <td colspan="1">Fixed</td>
+                <td>Almost</td>
+
+                <td>Fixed</td>
+                <td colspan="2">Yes</td>
+
+                <td colspan="2">Fixed</td>
+                <td>Yes</td>
+
+                <td>Fixed</td>
+                <td>Yes</td>
+
+                <td colspan="2">Yes</td>
+                <td colspan="1">Yes</td>
+            </tr>
+
+            <tr>
+                <td>[attr]</td>
+                <td colspan="2">No</td>
+                <td colspan="2">Yes</td>
+                <td colspan="3">Yes</td>
+                <td colspan="3">Yes</td>
+                <td colspan="2">Yes</td>
+                <td colspan="2">Yes</td>
+                <td colspan="1">Yes</td>
+            </tr>
+
+            <tr>
+                <td>class</td>
+                <td colspan="2">buggy</td>
+                <td colspan="2">Yes</td>
+                <td colspan="3">Yes</td>
+                <td colspan="3">Yes</td>
+                <td colspan="2">Yes</td>
+                <td colspan="2">Yes</td>
+                <td colspan="1">Yes</td>
+            </tr>
+
+            <tr>
+                <td>:before/<br>:after</td>
+                <td colspan="3">No</td>
+                <td colspan="1">Yes</td>
+                <td colspan="3">Yes</td>
+                <td colspan="3">Yes</td>
+                <td colspan="2">Yes</td>
+                <td colspan="2">Yes</td>
+                <td colspan="1">Yes</td>
+            </tr>
+
+            <tr>
+                <td>:hover/<br>:active</td>
+                <td colspan="2">Minimal</td>
+                <td>Incomplete</td>
+                <td >Yes</td>
+                <td colspan="3">Yes</td>
+                <td colspan="3">Yes</td>
+                <td colspan="2">Yes</td>
+                <td colspan="2">Yes</td>
+                <td colspan="1">Yes</td>
+            </tr>
+
+          </table>
+    </div>
+
+      
+</body>
+</html>

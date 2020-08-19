@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 }
 
+.home{
+	text-align: center;
+}
+
 .themeComponent1{
 	position: fixed;
 	bottom: 0;
@@ -75,6 +79,7 @@ h1{
 /* Style the tab content */
 .tabcontent {
 	margin-left: 16%; /* to display sidenav */
+	margin-right: 16%;
 	font-size: 1.3em;
 	padding: 0px 10px;
 }
