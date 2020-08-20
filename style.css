@@ -112,5 +112,39 @@ h1{
 	border: 1px solid #1e3f5a;
 	padding: 5px;
 	margin-bottom: 10px;
-	background-color: #ebebeb;
+	background-color: #f1f1f1;
+}
+
+/* form css */
+.formbody{
+	padding: 1cm;
+	align-items: center;
+	font-family: 'Comic Neue', cursive;
+	/* background-color: whitesmoke; */
+	background-color: #1e3f5a;
+
+	background-image: url('https://rb.gy/wcrqyy');
+}
+.inputform{
+	width: 10.5cm;
+	height: 1cm;
+	font-size: large;
+	font-family: 'Courier New', Courier, monospace;
+}
+.formMain{
+	border: 1px solid black;
+	padding: 1cm;
+	opacity: 1;
+	background-color: white;
+	color: black;
+	opacity: 0.8;
+	font-size: 20px;
+	width: 50%;
+
+}
+input:hover{
+  border: 2px #1e3f5a solid;
+}
+input:active{
+	border: 3px #1e3f5a solid;
 }
