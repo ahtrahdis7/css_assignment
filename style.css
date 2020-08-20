@@ -50,6 +50,7 @@ h1{
 	left: 0;
 	background-color: #1e3f5a;
 	overflow-x: ellipsis;
+	overflow: auto;
 }
 
 /* Style the buttons inside the tab */
