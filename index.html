@@ -18,6 +18,7 @@
         <img src='images/IIIT-BH_Official_Logo.png' style="width: 100%;  text-align: center;">
         <a class="tablinks" onclick="openProperty(event, 'Home')" id="defaultOpen">Home</a>
         <a class="tablinks" onclick="openProperty(event, 'Syntax')">Syntax</a>
+        <a class="tablinks" onclick="openProperty(event, 'Tags')">Tags</a>
         <a class="tablinks" onclick="openProperty(event, 'Background')">Background</a>
         <a class="tablinks" onclick="openProperty(event, 'Text Formatting')">Text Formatting</a>
         <a class="tablinks" onclick="openProperty(event, 'Display')">Display</a>
@@ -52,6 +53,11 @@
               </ul>
            </div>
         </div>
+        <div id="Tags" class="tabcontent">
+          <h1>Tags</h1>
+          <p>Discuss various tags</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quisquam quod nemo repellendus magnam sequi sunt cum consectetur rerum molestiae!</p>
+       </div>
 
         <div id="Syntax" class="tabcontent">
           <h1>Syntax and Units</h1>
@@ -124,11 +130,106 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
         </div>
 
+        <!-- IMAGE GALLERY SECTION -->
         <div id="ImageGallery" class="tabcontent">
           <h1>Image Gallery</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+          <P>We will see how to make an Image Gallery using the above discussed properties</P>
+
+          <h3>HTML and CSS for the gallery shown below</h3><br>
+          <h3>Code:</h3>
+          <div class="code">
+            <xmp>
+              <!DOCTYPE html>
+              <html lang="en">
+              <head>
+                <title>Gallery</title>
+                <style>
+                  .galleryImage{
+                    width: 250px;
+                    height: 250px;
+                    margin-left: 2px;
+                    margin-right: 2px;
+                  }
+                  .gallery{
+                    float: left;
+                  }
+                  .imagelink:hover{
+                    opacity: 0.6;
+                  }
+                </style>
+              </head>
+              <body>
+                <div class="gallery">
+                  <a href="images/gal1.jpg" class="imagelink">
+                    <img src="images/gal1.jpg" class="galleryImage">
+                  </a>
+                </div>
+                <div class="gallery">
+                  <a href="images/gal2.jpg" class="imagelink">
+                    <img src="images/gal2.jpg" class="galleryImage">
+                  </a>
+                </div>
+                <div class="gallery">
+                  <a href="images/gal3.jpg" class="imagelink">
+                    <img src="images/gal3.jpg" class="galleryImage">
+                  </a>
+                </div>
+                .
+                .
+                <!-- More similar lines of code -->
+              </body>
+              </html>
+            </xmp>
+          </div><br>
+          <h3>Result:</h3><br>
+          <div>
+            <div class="gallery">
+              <a href="images/gal1.jpg" class="imagelink">
+                <img src="images/gal1.jpg" class="galleryImage">
+              </a>
+            </div>
+            <div class="gallery">
+              <a href="images/gal2.jpg" class="imagelink">
+                <img src="images/gal2.jpg" class="galleryImage">
+              </a>
+            </div>
+            <div class="gallery">
+              <a href="images/gal3.jpg" class="imagelink">
+                <img src="images/gal3.jpg" class="galleryImage">
+              </a>
+            </div>
+            <div class="gallery">
+              <a href="images/gal4.jpg" class="imagelink">
+                <img src="images/gal4.jpg" class="galleryImage">
+              </a>
+            </div>
+            <div class="gallery">
+              <a href="images/gal5.jpg" class="imagelink">
+                <img src="images/gal5.jpg" class="galleryImage">
+              </a>
+            </div>
+            <div class="gallery">
+              <a href="images/gal6.jpeg" class="imagelink">
+                <img src="images/gal6.jpeg" class="galleryImage">
+              </a>
+            </div>
+            <div class="gallery">
+              <a href="images/gal7.jpg" class="imagelink">
+                <img src="images/gal7.jpg" class="galleryImage">
+              </a>
+            </div>
+            <div class="gallery">
+              <a href="images/gal8.jpg" class="imagelink">
+                <img src="images/gal8.jpg" class="galleryImage">
+              </a>
+            </div>
+          </div>
+          
+          
         </div>
 
+
+        <!-- TEST YOURSELF SECTION -->
         <div id="Test" class="tabcontent">
           <h1>Test Yourself</h1>
           <h3>Problem Statement:</h3>
