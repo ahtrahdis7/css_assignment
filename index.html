@@ -122,86 +122,61 @@
         
         <div id="Forms" class="tabcontent">
           <h1>Forms</h1>
+
+          <h3>Points to Remember:</h3>
           <ul>
-            <li><p>Acceptable Parameters for 'type' in Input tags 
-              <br>
-              [ 'button', 'checkbox', 'color', 'date', 'datetime', 'datetime-local', 'email', 'file', 
-              'hidden', 'image', 'month', 'number']
-            </p></li>
-            <li><p>'Method' parameter contains the type of requestmade to the actions' endpoint</p></li>
-            <li><p>'Action' parameter contains the 'endpoint' to which the POST request has to be made.</p></li>
-          </ul>
-          <h3>Code:</h3>
-          <div class="code">
-            <xmp>
-              <!DOCTYPE html>
-              <html lang="en">
-              <head>
-                <title>Forms</title>
-                <style>
-                  .formbody{
-                      padding-top: 1cm;
-                      align-items: center;
-                      font-family: 'Comic Neue', cursive;
-                      background-color: whitesmoke;
-                      background-image: url('https://rb.gy/wcrqyy');
-                  }
-                  .inputform{
-                      width: 10.5cm;
-                      height: 1cm;
-                  }
-                  .formMain{
-                      border: 1px solid black;
-                      padding: 1cm;
-                      background-color:brown;
-                      opacity: 0.7;
-                      color: white;
-                      font-size: 20px;
-                  }
-                  input:hover{
-                    border: 1px #1e3f5a solid;
-                  }
-              </style>
-              </head>
-              <body>
-                
-                <div class="formbody">
-                  <form class="formMain" action="#" method="POST"> 
-                    <!-- Text Input -->
-                    <label for="name">Name</label><br>
-                    <input type="text" name="name" id="text" placeholder="name"><br><br>
-                    <!-- Radio Button -->
-                    <label>Gender</label><br>
-                    <input type="radio" id="gender" name="gender" value="male">
-                    <label for="male">Male</label><br>
-                    <input type="radio" id="gender" name="gender" value="female">
-                    <label for="female">Female</label><br>
-                    <!-- Dropdown -->
-                    <label for="branch">Choose Your Branch:</label>
-                        <select id="branch" name="branch">
-                        <option value="CSE">CSE</option>
-                        <option value="IT">IT</option>
-                        </select><br><br>
-                    <!-- Checkbox -->
-                    <label >Select your Choice of Clubs in Tech Soc</label><br>
-                    <input type="checkbox" id="checkbox" name="psoc" value="tech">
-                    <label for="Tech"> Programming Society</label><br>
-                    <input type="checkbox" id="checkbox" name="tars" value="cultural">
-                    <label for="cultural"> Robotics Society</label><br>
-                    <input 
-                    style="align-self: center; width: 2cm; color:
-                           brown; background-color: rgb(255, 255, 255);" 
-                           type="submit" placeholder="SUBMIT">
-                </form>
-                </div>
-              </body>
-              </html>
-            </xmp>
-            <br>
-          </div>
-          <br>
-          <h3>Result:</h3>
-          <div class="formbody">
+              <li>
+                  <p>Acceptable Parameters for 'type' in Input tags
+                      <br>
+                      [ 'button', 'checkbox', 'color', 'date', 'datetime', 'datetime-local', 'email', 'file',
+                      'hidden', 'image', 'month', 'number']
+                  </p>
+              </li>
+              <li>
+                  <p>'Method' parameter contains the type of requestmade to the actions' endpoint</p>
+              </li>
+              <li>
+                  <p>'Action' parameter contains the 'endpoint' to which the POST request has to be made.</p>
+              </li>
+            </ul>
+            <h3>Code:</h3>
+
+            <div class="code">
+                <xmp>
+      <form class="formMain" action="#" method="POST">
+          <!-- Text Input -->
+          <label for="name">Name</label><br>
+          <input type="text" name="name" id="text" placeholder="name"><br><br>
+          <!-- Radio Button -->
+          <label>Gender</label><br>
+          <input type="radio" id="gender" name="gender" value="male">
+          <label for="male">Male</label><br>
+          <input type="radio" id="gender" name="gender" value="female">
+          <label for="female">Female</label><br>
+          <input type="radio" id="gender" name="gender" value="other">
+          <label for="other">Other</label><br><br>
+          <!-- Dropdown -->
+          <label for="branch">Choose Your Branch:</label>
+          <select id="branch" name="branch">
+              <option value="CSE">CSE</option>
+              <option value="IT">IT</option>
+              <option value="CE">CE</option>
+              <option value="ETC">ETC</option>
+              <option value="EEE">EEE</option>
+          </select><br><br>
+          <!-- Checkbox -->
+          <label>Select your Choice of Clubs in Tech Soc</label><br>
+          <input type="checkbox" id="checkbox" name="psoc" value="tech">
+          <label for="Tech"> Programming Society</label><br>
+          <input type="checkbox" id="checkbox" name="tars" value="cultural">
+          <label for="cultural"> Robotics Society</label><br>
+          <input style="align-self: center; width: 2cm; color:
+              brown; background-color: rgb(255, 255, 255);" type="submit" placeholder="SUBMIT">
+      </form>
+                </xmp>
+            </div>
+            <h3>Results:</h3>
+             <div class="formbody" >
             <form class="formMain" action="/registration" method="POST"> 
               <!-- Text Input -->
               <label for="name">Name</label><br>
@@ -235,11 +210,11 @@
               <input 
               style="align-self: center; width: 3cm; height: 1cm; border-radius: 3px;
                 color: white; background-color: #1e3f5a; opacity: 1;" 
-                     type="SUBMIT" placeholder="SUBMIT">
+                     type="SUBMIT" 
+                     placeholder="SUBMIT">
             </form>
           </div>
-      </div>
-
+        </div>
         <!-- IMAGE GALLERY SECTION -->
         <div id="ImageGallery" class="tabcontent">
           <h1>Image Gallery</h1>
@@ -249,46 +224,46 @@
           <h3>Code:</h3>
           <div class="code">
             <xmp>
-              <!DOCTYPE html>
-              <html lang="en">
-              <head>
-                <title>Gallery</title>
-                <style>
-                  .galleryImage{
-                    width: 250px;
-                    height: 250px;
-                    margin-left: 2px;
-                    margin-right: 2px;
-                  }
-                  .gallery{
-                    float: left;
-                  }
-                  .imagelink:hover{
-                    opacity: 0.6;
-                  }
-                </style>
-              </head>
-              <body>
-                <div class="gallery">
-                  <a href="images/gal1.jpg" class="imagelink">
-                    <img src="images/gal1.jpg" class="galleryImage">
-                  </a>
-                </div>
-                <div class="gallery">
-                  <a href="images/gal2.jpg" class="imagelink">
-                    <img src="images/gal2.jpg" class="galleryImage">
-                  </a>
-                </div>
-                <div class="gallery">
-                  <a href="images/gal3.jpg" class="imagelink">
-                    <img src="images/gal3.jpg" class="galleryImage">
-                  </a>
-                </div>
-                .
-                .
-                <!-- More similar lines of code -->
-              </body>
-              </html>
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <title>Gallery</title>
+            <style>
+              .galleryImage{
+                width: 250px;
+                height: 250px;
+                margin-left: 2px;
+                margin-right: 2px;
+              }
+              .gallery{
+                float: left;
+              }
+              .imagelink:hover{
+                opacity: 0.6;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="gallery">
+              <a href="images/gal1.jpg" class="imagelink">
+                <img src="images/gal1.jpg" class="galleryImage">
+              </a>
+            </div>
+            <div class="gallery">
+              <a href="images/gal2.jpg" class="imagelink">
+                <img src="images/gal2.jpg" class="galleryImage">
+              </a>
+            </div>
+            <div class="gallery">
+              <a href="images/gal3.jpg" class="imagelink">
+                <img src="images/gal3.jpg" class="galleryImage">
+              </a>
+            </div>
+            .
+            .
+            <!-- More similar lines of code -->
+          </body>
+          </html>
             </xmp>
           </div><br>
           <h3>Result:</h3><br>
