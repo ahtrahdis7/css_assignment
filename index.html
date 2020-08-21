@@ -89,8 +89,25 @@
         </div>
 
         <div id="Overflow" class="tabcontent">
-          <h1>Overflow</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+          <h1>CSS Layout - Overflow</h1>
+        <p style=" font-weight: bold;">The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+
+          The overflow property has the following values:
+          <ul style="text-align: left;">
+            <li> visible - Default. The overflow is not clipped. The content renders outside the element's box</li>
+            <li> hidden - The overflow is clipped, and the rest of the content will be invisible</li>
+            <li>scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content</li>
+            <li> auto - Similar to scroll, but it adds scrollbars only when necessary</li>
+          </ul>
+
+          <br>
+          <div id="note" style="background: lightgray;">
+            <p style="color: red; font-weight: bold;">Note: The overflow property only works for block elements with a specified height.</p>
+            <p style="color: red; font-weight: bold;">Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow : scroll" is set).</p> 
+              
+          </div>
+         
+         </p>
         </div>
 
         <div id="Image" class="tabcontent">
