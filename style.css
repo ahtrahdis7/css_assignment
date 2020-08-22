@@ -147,3 +147,11 @@ input:hover {
 input:active {
 	border: 3px #1e3f5a solid;
 }
+
+.overflowresult {
+	background-color: #eee;
+	width: 200px;
+	height: 100px;
+	border: 1px dotted black;
+	overflow: scroll;
+}

@@ -497,18 +497,43 @@
 
                 The overflow property has the following values:
             <ul style="text-align: left;">
-                <li> visible - Default. The overflow is not clipped. The content renders outside the element's
+                <li> <b>Default - </b>The overflow is not clipped. The content renders outside the element's
                     box
                 </li>
-                <li> hidden - The overflow is clipped, and the rest of the content will be invisible</li>
-                <li>scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+                <li> <b>hidden - </b>  The overflow is clipped, and the rest of the content will be invisible</li>
+                <li><b>scroll - </b> The overflow is clipped, and a scrollbar is added to see the rest of the content
                 </li>
-                <li> auto - Similar to scroll, but it adds scrollbars only when necessary</li>
+                <li> <b>auto - </b> Similar to scroll, but it adds scrollbars only when necessary</li>
             </ul>
 
-            <p>.....................</p>
+            <h2>Example</h2>
+                <div class="code">
+                    <pre>
+    html:
+
+    &lt;h1&gt;You can use the overflow property when you want to have better control of the layout.<br> The overflow property specifies what happens if content overflows an element's box.&lt;h1&gt;
+                    </pre>
+                </div>
+                <div class="code">
+                    <pre>
+    CSS:
+
+    div {
+        background-color: #eee;
+        width: 200px;
+        height: 100px;
+        border: 1px dotted black;
+        overflow: scroll;
+    }
+                    </pre>
+                </div>
+                <h3>Result</h3>
+                <div class="code">
+                    <h5 class="overflowresult">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</h1>
+                </div>
 
             <br>
+            <p>P.S - You can try other overflow options just by changing it in div style tag.</p><br>
             <div id="note" style="background: lightgray;">
                 <p style="color: red; font-weight: bold;">Note: The overflow property only works for block
                     elements
@@ -526,11 +551,181 @@
 
         <div id="Image" class="tabcontent">
             <h1>Image and Icons</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum,
-                commodi
-                officiis
-                sunt neque, sit aliquam mollitia odio nemo?</p>
-            <p>Cover "Float Prop"</p>
+            <h2>Image Overlay Icon</h2>
+            <p>Hover over the image to see the overlay effect.</p>
+
+            <h2>Example 1</h2>
+            <div class="code">
+                <pre>
+html:
+
+< div class="container">
+    < img src="img_avatar.png" alt="Avatar" class="image">
+    < div class="overlay">
+      < a href="#" class="icon" title="User Profile">
+        < i class="fa fa-user">< /i>
+      < /a>
+    < /div>
+  < /div>
+                </pre>
+            </div>
+            <div class="code">
+                <pre>
+CSS:
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Make the image to responsive */
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* The overlay effect (full height and width) - lays on top of the container and over the image */
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: red;
+  }
+  
+  /* When you mouse over the container, fade in the overlay icon*/
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* The icon inside the overlay is positioned in the middle vertically and horizontally */
+  .icon {
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* When you move the mouse over the icon, change color */
+  .fa-user:hover {
+    color: #eee;
+  }
+                </pre>
+            </div>
+            <h3>Result</h3>
+            <div class="code">
+                <style>
+                    .container {
+                      position: relative;
+                      width: 100%;
+                      max-width: 400px;
+                    }
+                    
+                    .image {
+                      display: block;
+                      width: 100%;
+                      height: auto;
+                    }
+                    
+                    .overlay {
+                      position: absolute;
+                      top: 0;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      height: 100%;
+                      width: 100%;
+                      opacity: 0;
+                      transition: .3s ease;
+                      background-color: red;
+                    }
+                    
+                    .container:hover .overlay {
+                      opacity: 1;
+                    }
+                    
+                    .icon {
+                      color: white;
+                      font-size: 100px;
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      -ms-transform: translate(-50%, -50%);
+                      text-align: center;
+                    }
+                    
+                    .fa-user:hover {
+                      color: #eee;
+                    }
+                    </style>
+                    </head>
+                    <body>
+                    
+                    <h2>Fade in Overlay Icon</h2>
+                    <p>Hover over the image to see the effect.</p>
+                    
+                    <div class="container">
+                      <img src="images/gal2.jpg" alt="Avatar" class="image">
+                      <div class="overlay">
+                      <a href="#" class="icon" title="User Profile">
+                        <i class="fa fa-user"></i>
+                      </a>
+                      </div>
+                    </div>
+                    
+            </div>
+
+        <br>
+        <h2>Image Filters</h2>
+            <p>The CSS filter property adds visual effects (like blur and saturation) to an element.</p>
+
+            <h2>Example 2</h2>
+            <div class="code">
+                <pre>
+html:
+< p>Apply a blur effect to the image:< /p>
+< img src="images/gal1.jpg" alt="img_avatar" width="300" height="300">
+                </pre>
+            </div>
+            <div class="code">
+                <pre>
+CSS:
+
+img {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+  }
+                </pre>
+            </div>
+            <h4>Result</h4>
+            <div class="code">
+                <style>
+                    .imgblur{
+                      -webkit-filter: blur(5px); 
+                      filter: blur(5px);
+                    }
+                    </style>
+                    </head>
+                    <body>
+                    
+                    <p>Apply a blur effect to the image:</p>
+                    
+                    <img src="images/gal1.jpg" alt="" class="imgblur" width="300" height="300">
+                    
+            </div>
+            <p style="font-size:larger;"><b><a href="https://www.w3schools.com/howto/howto_css_image_overlay.asp"> Explre other images effects and try them out.</a></b></p>
+
         </div>
 
         <div id="Box Model" class="tabcontent">
