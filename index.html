@@ -814,8 +814,7 @@
                     box
                 </li>
                 <li> <b>hidden - </b> The overflow is clipped, and the rest of the content will be invisible</li>
-                <li><b>scroll - </b> The overflow is clipped, and a scrollbar is added to see the rest of the
-                    content
+                <li><b>scroll - </b> The overflow is clipped, and a scrollbar is added to see the rest of the content
                 </li>
                 <li> <b>auto - </b> Similar to scroll, but it adds scrollbars only when necessary</li>
             </ul>
@@ -843,8 +842,7 @@
             </div>
             <h3>Result</h3>
             <div class="code">
-                <h5 class="overflowresult">You can use the overflow property when you want to have better control of
-                    the
+                <h5 class="overflowresult">You can use the overflow property when you want to have better control of the
                     layout. The overflow property specifies what happens if content overflows an element's box.</h1>
             </div>
 
@@ -1049,29 +1047,438 @@
 
         <div id="Box Model" class="tabcontent">
             <h1>Box model</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum eum, quis soluta autem,
-                voluptatem
-                pariatur molestias quasi consectetur ipsam aut quidem eveniet placeat aliquid vero iure, ipsa
-                quia
-                ab.</p>
-        </div>
+            <p>All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
+            The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+                
+                Explanation of the different parts:
+                
+                <ul style="text-align: left;">
+                   
+                    <li> <b>Content - </b>  The content of the box, where text and images appear</li>
+                    <li><b>Padding - </b>   Clears an area around the content. The padding is transparent
+                    </li>
+                    <li> <b>Border - </b>  A border that goes around the padding and content</li>
+                    <li> <b>Margin - </b>  Clears an area outside the border. The margin is transparent
+                    </li>
+                </ul>
+                
+                The box model allows us to add a border around elements, and to define space between elements. </p>
+                <br>
+                <h2>Example 1</h2>
+                <div class="code">
+                    <pre>
+            html:
+            
+            < h2>Demonstrating the Box Model< /h2>
+
+            < p>The CSS box model is essentially a box that wraps around every HTML element.<br> It consists of: borders, padding, margins, and the actual content.< /p>
+            
+            < div>This text is the content of the box. We have added a 50px padding ....< /div>
+            
+                            </pre>
+                </div>
+                <div class="code">
+                    <pre>
+            CSS:
+            
+            div {
+                background-color: lightgrey;
+                width: 300px;
+                border: 15px solid green;
+                padding: 50px;
+                margin: 20px;
+              }
+                            </pre>
+                </div>
+                <h3>Result</h3>
+                <div class="code">
+                    <style>
+                        .boxmodel {
+                          background-color: lightgrey;
+                          width: 400px;
+                          border: 15px solid green;
+                          padding: 50px;
+                          margin: 20px;
+                        }
+                        </style>
+                        </head>
+                        <body>
+                        
+                        <h2>Demonstrating the Box Model</h2>
+                        
+                        <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.</p>
+                        
+                        <div class="boxmodel">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.< /div>
+                        </div>
+                        <h2>Width and Height of an Element</h5>
+                           <p> In order to set the width and height of an element correctly in all browsers, you need to know how the box model works.
+                            <b>Here is the calculation:</b><br><br>
+                            <b>320px (width)<br>
+                            + 20px (left + right padding)<br>
+                            + 10px (left + right border)<br>
+                            + 0px (left + right margin)<br>
+                            = 350px</b>
+                           </p>
+                           <p style="font-size: larger;">The total width of an element should be calculated like this:<br>
+
+                            Total element width = width + left padding + right padding + left border + right border + left margin + right margin<br>
+                            
+                            The total height of an element should be calculated like this:<br>
+                            
+                            Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</p>
+
+                        <p style="font-size: larger; background: coral;"><B>Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area.<br> To calculate the full size of an element, you must also add padding, borders and margins.
+                        </B>
+                        </p> 
+                         
+                    </div>
+        </div>      
 
         <div id="Layout" class="tabcontent">
-            <h1>Layout</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum,
-                commodi
-                officiis
-                sunt neque, sit aliquam mollitia odio nemo?</p>
-            <p>Cover the "Navbar Properties" "Outline" </p>
+            <h1>CSS Website Layout</h1>
+            <p>A website is often divided into headers, menus, content and a footer:</p>
+            <img src="images/weblayout.png"  width="1000" height="500">
+            <h2>Responsive Website Layout</h2>
+            <p>By using some of the CSS code above, we have created a responsive website layout,<br> which varies between two columns and full-width columns depending on screen width:</p>
+        
+            <h2>Example 1</h2>
+            <div class="code">
+                <pre>
+        CODE : <br>
+        &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, <br>make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, <br>make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="header"&gt;
+  &lt;h1&gt;Test&lt;/h1&gt;
+  &lt;p&gt;Resize the browser window to see the effect.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="topnav"&gt;
+  &lt;a href="#"&gt;Link&lt;/a&gt;
+  &lt;a href="#"&gt;Link&lt;/a&gt;
+  &lt;a href="#"&gt;Link&lt;/a&gt;
+  &lt;a href="#" style="float:right"&gt;Link&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="leftcolumn"&gt;
+    &lt;div class="card"&gt;
+      &lt;h2&gt;Your Heading&lt;/h2&gt;
+      &lt;h5&gt;Title description&lt;/h5&gt;
+      &lt;div class="fakeimg" style="height:200px;"&gt;Image&lt;/div&gt;
+      &lt;p&gt;&lt;b&gt;JSON&lt;/b&gt;&lt;/p&gt;
+      &lt;p&gt;JSON stands for JavaScript Object Notation.<br> JSON is a standard lightweight data-interchange format which is quick and easy to parse and generate.
+
+JSON, like XML, is a text-based format that's easy to write and easy to understand for both humans <br>and computers, but unlike XML, JSON data structures occupy less bandwidth than their XML versions.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="rightcolumn"&gt;
+    &lt;div class="card"&gt;
+      &lt;h2&gt;About Me&lt;/h2&gt;
+      &lt;div class="fakeimg" style="height:100px;"&gt;Image&lt;/div&gt;
+      &lt;p&gt;Anything......&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="footer"&gt;
+  &lt;h2&gt;Footer&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+                        </pre>
+                        <h3>Result</h3>
+                        <div class="code">
+                            <!DOCTYPE html>
+<html>
+<head>
+<style>
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Test</h1>
+  <p>Resize the browser window to see the effect.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" style="float:right">Link</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Your Heading</h2>
+      <h5>Title description</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p><b>JSON</b></p>
+      <p>JSON stands for JavaScript Object Notation. JSON is a standard lightweight data-interchange format which is quick and easy to parse and generate.
+
+JSON, like XML, is a text-based format that's easy to write and easy to understand for both humans and computers, but unlike XML, JSON data structures occupy less bandwidth than their XML versions.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Anything......</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
+
+                            </div>
         </div>
 
         <div id="Combinators" class="tabcontent">
             <h1>Combinators</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum,
-                commodi
-                officiis
-                sunt neque, sit aliquam mollitia odio nemo?</p>
+            <p>A combinator is something that explains the relationship between the selectors.
+
+                A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+                There are four different combinators in CSS:</p>
+                <ul style="text-align: left;">
+
+                    <li> <b>descendant selector (space) </b></li>
+                    <li><b>child selector (>)</b>
+                    </li>
+                    <li> <b>adjacent sibling selector (+)</b></li>
+                    <li> <b>general sibling selector (~) </b>
+                    </li>
+                </ul>
+                <h3 style="font-size: larger; text-decoration: underline;">Descendant Selector</h3>
+                <p>The descendant selector matches all elements that are descendants of a specified element.<br>
+
+                    The following example selects all < p> elements inside < div> elements: <br><br>
+                    
+                    Example:<br>
+                    <b>div p {
+                      background-color: yellow;
+                    }</b></p>
+                    <h4 style="font-size: larger;text-decoration: underline;">Child Selector</h4>
+                    <p>The child selector selects all elements that are the children of a specified element.<br>
+
+                        The following example selects all < p> elements that are children of a < div> element: <br><br>
+                        
+                        Example:<br>
+                        <b>div > p {
+                            background-color: yellow;
+                          }</b></p>
+                    <h5 style="font-size: larger;text-decoration: underline;">Adjacent Sibling Selector</h5>
+                    <p>The adjacent sibling selector selects all elements that are the adjacent siblings of a specified element.<br>
+
+                        Sibling elements must have the same parent element, and "adjacent" means "immediately following".<br>
+                        
+                        The following example selects all <p> elements that are placed immediately after <div> elements: <br><br>
+                        
+                        Example:<br>
+                        <b>div + p {
+                            background-color: yellow;
+                          }</b></p>
+                       
         </div>
+
 
         <div id="PseudoClass" class="tabcontent">
             <h1>Pseudo Class and Elements</h1>
