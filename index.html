@@ -14,7 +14,7 @@
     <div class="themeComponent1"></div>
     <div class="themeComponent2"></div>
 
-    <div class="tab sidenav" >
+    <div class="tab sidenav">
         <img src='images/IIIT-BH_Official_Logo.png' style="width: 100%;  text-align: center;">
         <a class="tablinks" onclick="openProperty(event, 'Home')" id="defaultOpen">Home</a>
         <a class="tablinks" onclick="openProperty(event, 'Syntax')">Syntax</a>
@@ -37,363 +37,538 @@
     </div>
     <div class="main">
 
-         <div id="Home" class="tabcontent home">
-           <h1><b>Welcome to CSS Tutorial!</b> <br> Let's have some fun</h1>
-           
-           <div style="bottom: 0;position: fixed;">
-              <h4 style="text-align: left;">
-                What's in it for you ?
-              </h4>
-              <ul style="text-align: left;">
-                <li>Detailed Description of Individual Sections with Appropriate Examples</li>
-                <li>Made CSS Simple for Beginners</li>
-                <li>Examples Demonstrating usage of CSS properties to specific use.</li>
-                <li>Quizzes for Individual Section</li>
-                <li>One Final Self Assesment Test</li>
-              </ul>
-           </div>
+        <div id="Home" class="tabcontent home">
+            <h1><b>Welcome to CSS Tutorial!</b> <br> Let's have some fun</h1>
+
+            <div style="bottom: 0;position: fixed;">
+                <h4 style="text-align: left;">
+                    What's in it for you ?
+                </h4>
+                <ul style="text-align: left;">
+                    <li>Detailed Description of Individual Sections with Appropriate Examples</li>
+                    <li>Made CSS Simple for Beginners</li>
+                    <li>Examples Demonstrating usage of CSS properties to specific use.</li>
+                    <li>Quizzes for Individual Section</li>
+                    <li>One Final Self Assesment Test</li>
+                </ul>
+            </div>
         </div>
 
         <div id="Syntax" class="tabcontent">
-          <h1>Syntax and Units</h1>
-          <p>Cover "CSS selectors" </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quisquam quod nemo repellendus magnam sequi sunt cum consectetur rerum molestiae!</p>
-       </div>
+            <h2>CSS Selectors</h2>
+            <p>CSS selectors are used to find (or select) the HTML elements you
+                want to style.</p>
+            <p>We can divide CSS selectors into five categories:</p>
+            <ul>
+                <li>Simple selectors (select elements based on name, id, class)</li>
+                <li>Combinator selectors</a> (select
+                    elements based on a specific relationship between them)</li>
+                <li>Pseudo-class selectors</a> (select elements based on a certain state)</li>
+                <li>Pseudo-elements selectors</a> (select
+                    and style a part of an element)</li>
+                <li>Attribute selectors</a> (select elements based on
+                    an attribute or attribute value)</li>
+            </ul>
+            <p>This page will explain the most basic CSS selectors.</p>
+            <hr>
+            <div>
+                <h2>The CSS element Selector</h2>
+                <p>The element selector selects HTML elements based on the element name.</p>
+                <h3>Example</h3>
+                <p>Here, all &lt;p&gt; elements on the page will be
+                    center-aligned, with a red text color</p>
+                <div class="code">
+                    <xmp>
+                        html:
 
+                        <p>This is center-aligned, with a red text color</p>
+                    </xmp>
+                    <xmp>
+                        CSS:
+
+                        p {
+                        text-align: center;
+                        color: red;
+                        }
+                    </xmp>
+                </div>
+                <h3>Result</h3>
+                <div class="code">
+                    <p style="text-align: center;color: red;">This is center-aligned, with a red text color</p>
+                </div>
+            </div>
+            <div>
+                <h2>The CSS id Selector</h2>
+                <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+                <p>The id of an element is unique within a page, so the id selector is
+                    used to
+                    select one unique element!</p>
+                <p>To select an element with a specific id, write a hash (#) character, followed by
+                    the id of the element.</p>
+                <h3>Example</h3>
+                <p>The CSS rule below will be applied to the HTML element with id="para1"</p>
+                <div class="code">
+                    <xmp>
+                        html:
+
+                        <p id="para1">This is center-aligned, with a red text color</p>
+                    </xmp>
+                    <xmp>
+                        CSS:
+
+                        #para1 {
+                        text-align: center;
+                        color: blue;
+                        }
+                    </xmp>
+                </div>
+                <h3>Result</h3>
+                <div class="code">
+                    <p id="para1" style="text-align: center;color:blue;">This is para1 with center-aligned, with a red
+                        text
+                        color</p>
+                </div>
+            </div>
+
+            <div>
+                <h2>The CSS class Selector</h2>
+                <p>The class selector selects HTML elements with a specific class attribute.</p>
+                <p>To select elements with a specific class, write a period (.) character, followed by the
+                    class name.</p>
+                <h3>Example</h3>
+                <p>In this example all HTML elements with class=&quot;center&quot; will be red and center-aligned:&nbsp;
+                </p>
+                <div class="code">
+                    <xmp>
+                        html:
+
+                        <p class="para2">This is center-aligned, with a red text color</p>
+                    </xmp>
+                    <xmp>
+                        CSS:
+
+                        #para2 {
+                        text-align: center;
+                        color: green;
+                        }
+                    </xmp>
+                </div>
+                <h3>Result</h3>
+                <div class="code">
+                    <p class="para2" style="text-align: center;color:green;">This is para2 with center-aligned, with a
+                        red
+                        text
+                        color</p>
+                </div>
+            </div>
+            <div>
+                <h2>The CSS Universal Selector</h2>
+                <p>The universal selector (*) selects all HTML
+                    elements on the page.</p>
+                <h3>Example</h3>
+                <p>The CSS rule below will affect every HTML element on the page:&nbsp;</p>
+                <div class="code">
+                    <xmp>
+                        * {
+                        text-align: center;
+                        color: red;
+                        }
+                    </xmp>
+                </div>
+            </div>
+
+            <div>
+                <h2>The CSS Grouping Selector</h2>
+                <p>The grouping selector selects all the HTML elements with the same style
+                    definitions.</p>
+                <p>Look at the following CSS code (the h1, h2, and p elements have the same
+                    style definitions):</p>
+                <div class="code">
+                    <xmp>
+                        h1, h2, p {
+                        text-align: center;
+                        color: red;
+                        }
+                    </xmp>
+                </div>
+                <p>It will be better to group the selectors, to minimize the code.</p>
+                <p>To group selectors, separate each selector with a comma.</p>
+            </div>
+
+        </div>
         <div id="Background" class="tabcontent">
-           <h1>Background</h1>
-           <p>Discuss "Opacity" Here.</p>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quisquam quod nemo repellendus magnam sequi sunt cum consectetur rerum molestiae!</p>
+            <h1>Background</h1>
+            <p>Discuss "Opacity" Here.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quisquam quod nemo repellendus
+                magnam sequi
+                sunt cum consectetur rerum molestiae!</p>
         </div>
 
         <div id="Text Formatting" class="tabcontent">
-          <h1>Text Formatting and Links</h1>
-          <p>Cover "Font" Properties Here</p>
+            <h1>Text Formatting and Links</h1>
+            <p>Cover "Font" Properties Here</p>
         </div>
 
         <div id="Display" class="tabcontent">
-          <h1>Display</h1>
-        <p>Cover  "Align"  "max-width".</p>
-        <p>"height" "width" "padding" "margin" "comments"</p>
+            <h1>Display</h1>
+            <p>Cover "Align" "max-width".</p>
+            <p>"height" "width" "padding" "margin" "comments"</p>
         </div>
 
         <div id="Tables" class="tabcontent">
-          <h1>Tables</h1>
-          <p>Reference "tables.html"</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+            <h1>Tables</h1>
+            <p>Reference "tables.html"</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum,
+                commodi
+                officiis
+                sunt neque, sit aliquam mollitia odio nemo?</p>
         </div>
 
         <div id="Postion" class="tabcontent">
-          <h1>Postion</h1>
-          <p>Cover "Dropdowns" and "attr selectors</p>
+            <h1>Postion</h1>
+            <p>Cover "Dropdowns" and "attr selectors</p>
         </div>
 
         <div id="Overflow" class="tabcontent">
-          <h1>CSS Layout - Overflow</h1>
-        <p style=" font-weight: bold;">The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+            <h1>CSS Layout - Overflow</h1>
+            <p style=" font-weight: bold;">The overflow property specifies whether to clip the content or to add
+                scrollbars
+                when the content of an element is too big to fit in the specified area.
 
-          The overflow property has the following values:
-          <ul style="text-align: left;">
-            <li> visible - Default. The overflow is not clipped. The content renders outside the element's box</li>
-            <li> hidden - The overflow is clipped, and the rest of the content will be invisible</li>
-            <li>scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content</li>
-            <li> auto - Similar to scroll, but it adds scrollbars only when necessary</li>
-          </ul>
+                The overflow property has the following values:
+            <ul style="text-align: left;">
+                <li> visible - Default. The overflow is not clipped. The content renders outside the element's
+                    box
+                </li>
+                <li> hidden - The overflow is clipped, and the rest of the content will be invisible</li>
+                <li>scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+                </li>
+                <li> auto - Similar to scroll, but it adds scrollbars only when necessary</li>
+            </ul>
 
-          <p>.....................</p>
+            <p>.....................</p>
 
-          <br>
-          <div id="note" style="background: lightgray;">
-            <p style="color: red; font-weight: bold;">Note: The overflow property only works for block elements with a specified height.</p>
-            <p style="color: red; font-weight: bold;">Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow : scroll" is set).</p> 
-              
-          </div>
-         
-         </p>
+            <br>
+            <div id="note" style="background: lightgray;">
+                <p style="color: red; font-weight: bold;">Note: The overflow property only works for block
+                    elements
+                    with a
+                    specified height.</p>
+                <p style="color: red; font-weight: bold;">Note: In OS X Lion (on Mac), scrollbars are hidden by
+                    default and
+                    only
+                    shown when being used (even though "overflow : scroll" is set).</p>
+
+            </div>
+
+            </p>
         </div>
 
         <div id="Image" class="tabcontent">
-          <h1>Image and Icons</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+            <h1>Image and Icons</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum,
+                commodi
+                officiis
+                sunt neque, sit aliquam mollitia odio nemo?</p>
             <p>Cover "Float Prop"</p>
         </div>
 
         <div id="Box Model" class="tabcontent">
             <h1>Box model</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum eum, quis soluta autem, voluptatem pariatur molestias quasi consectetur ipsam aut quidem eveniet placeat aliquid vero iure, ipsa quia ab.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum eum, quis soluta autem,
+                voluptatem
+                pariatur molestias quasi consectetur ipsam aut quidem eveniet placeat aliquid vero iure, ipsa
+                quia
+                ab.</p>
         </div>
 
         <div id="Layout" class="tabcontent">
-          <h1>Layout</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
-          <p>Cover the "Navbar Properties" "Outline" </p>
+            <h1>Layout</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum,
+                commodi
+                officiis
+                sunt neque, sit aliquam mollitia odio nemo?</p>
+            <p>Cover the "Navbar Properties" "Outline" </p>
         </div>
 
         <div id="Combinators" class="tabcontent">
-          <h1>Combinators</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+            <h1>Combinators</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum,
+                commodi
+                officiis
+                sunt neque, sit aliquam mollitia odio nemo?</p>
         </div>
 
         <div id="PseudoClass" class="tabcontent">
-          <h1>Pseudo Class and Elements</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum, commodi officiis sunt neque, sit aliquam mollitia odio nemo?</p>
+            <h1>Pseudo Class and Elements</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum,
+                commodi
+                officiis
+                sunt neque, sit aliquam mollitia odio nemo?</p>
         </div>
-        
-        <div id="Forms" class="tabcontent">
-          <h1>Forms</h1>
 
-          <h3>Points to Remember:</h3>
-          <ul>
-              <li>
-                  <p>Acceptable Parameters for 'type' in Input tags
-                      <br>
-                      [ 'button', 'checkbox', 'color', 'date', 'datetime', 'datetime-local', 'email', 'file',
-                      'hidden', 'image', 'month', 'number']
-                  </p>
-              </li>
-              <li>
-                  <p>'Method' parameter contains the type of requestmade to the actions' endpoint</p>
-              </li>
-              <li>
-                  <p>'Action' parameter contains the 'endpoint' to which the POST request has to be made.</p>
-              </li>
+        <div id="Forms" class="tabcontent">
+            <h1>Forms</h1>
+
+            <h3>Points to Remember:</h3>
+            <ul>
+                <li>
+                    <p>Acceptable Parameters for 'type' in Input tags
+                        <br>
+                        [ 'button', 'checkbox', 'color', 'date', 'datetime', 'datetime-local', 'email', 'file',
+                        'hidden', 'image', 'month', 'number']
+                    </p>
+                </li>
+                <li>
+                    <p>'Method' parameter contains the type of requestmade to the actions' endpoint</p>
+                </li>
+                <li>
+                    <p>'Action' parameter contains the 'endpoint' to which the POST request has to be made.</p>
+                </li>
             </ul>
             <h3>Code:</h3>
             <h4>CSS:</h4>
             <div class="code">
-              <xmp>
-      .formbody{
-        padding: 1cm;
-        align-items: center;
-        font-family: 'Comic Neue', cursive;
-        background-color: #1e3f5a;
-        background-image: url('https://rb.gy/wcrqyy');
-      }
-      .inputform{
-        width: 10.5cm;
-        height: 1cm;
-        font-size: large;
-        font-family: 'Courier New', Courier, monospace;
-      }
-      .formMain{
-        border: 1px solid black;
-        padding: 1cm;
-        opacity: 1;
-        background-color: white;
-        color: black;
-        opacity: 0.8;
-        font-size: 20px;
-        width: 50%;
-      }
-              </xmp>
+                <xmp>
+                    .formbody{
+                    padding: 1cm;
+                    align-items: center;
+                    font-family: 'Comic Neue', cursive;
+                    background-color: #1e3f5a;
+                    background-image: url('https://rb.gy/wcrqyy');
+                    }
+                    .inputform{
+                    width: 10.5cm;
+                    height: 1cm;
+                    font-size: large;
+                    font-family: 'Courier New', Courier, monospace;
+                    }
+                    .formMain{
+                    border: 1px solid black;
+                    padding: 1cm;
+                    opacity: 1;
+                    background-color: white;
+                    color: black;
+                    opacity: 0.8;
+                    font-size: 20px;
+                    width: 50%;
+                    }
+                </xmp>
             </div>
             <h4>HTML:</h4>
             <div class="code">
                 <xmp>
-      <form class="formMain" action="#" method="POST">
-          <!-- Text Input -->
-          <label for="name">Name</label><br>
-          <input type="text" name="name" id="text" placeholder="name"><br><br>
-          <!-- Radio Button -->
-          <label>Gender</label><br>
-          <input type="radio" id="gender" name="gender" value="male">
-          <label for="male">Male</label><br>
-          <input type="radio" id="gender" name="gender" value="female">
-          <label for="female">Female</label><br>
-          <input type="radio" id="gender" name="gender" value="other">
-          <label for="other">Other</label><br><br>
-          <!-- Dropdown -->
-          <label for="branch">Choose Your Branch:</label>
-          <select id="branch" name="branch">
-              <option value="CSE">CSE</option>
-              <option value="IT">IT</option>
-              <option value="CE">CE</option>
-              <option value="ETC">ETC</option>
-              <option value="EEE">EEE</option>
-          </select><br><br>
-          <!-- Checkbox -->
-          <label>Select your Choice of Clubs in Tech Soc</label><br>
-          <input type="checkbox" id="checkbox" name="psoc" value="tech">
-          <label for="Tech"> Programming Society</label><br>
-          <input type="checkbox" id="checkbox" name="tars" value="cultural">
-          <label for="cultural"> Robotics Society</label><br>
-          <input style="align-self: center; width: 2cm; color:
+                    <form class="formMain" action="#" method="POST">
+                        <!-- Text Input -->
+                        <label for="name">Name</label><br>
+                        <input type="text" name="name" id="text" placeholder="name"><br><br>
+                        <!-- Radio Button -->
+                        <label>Gender</label><br>
+                        <input type="radio" id="gender" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="gender" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="gender" name="gender" value="other">
+                        <label for="other">Other</label><br><br>
+                        <!-- Dropdown -->
+                        <label for="branch">Choose Your Branch:</label>
+                        <select id="branch" name="branch">
+                            <option value="CSE">CSE</option>
+                            <option value="IT">IT</option>
+                            <option value="CE">CE</option>
+                            <option value="ETC">ETC</option>
+                            <option value="EEE">EEE</option>
+                        </select><br><br>
+                        <!-- Checkbox -->
+                        <label>Select your Choice of Clubs in Tech Soc</label><br>
+                        <input type="checkbox" id="checkbox" name="psoc" value="tech">
+                        <label for="Tech"> Programming Society</label><br>
+                        <input type="checkbox" id="checkbox" name="tars" value="cultural">
+                        <label for="cultural"> Robotics Society</label><br>
+                        <input style="align-self: center; width: 2cm; color:
               brown; background-color: rgb(255, 255, 255);" type="submit" placeholder="SUBMIT">
-      </form>
+                    </form>
                 </xmp>
             </div>
             <h3>Results:</h3>
-             <div class="formbody" >
-            <form class="formMain" action="/registration" method="POST"> 
-              <!-- Text Input -->
-              <label for="name">Name</label><br>
-              <input class="inputform" type="text" name="name" id="text" placeholder="Name"><br><br>
-              <!-- Number Input -->
-              <label for="num">Number</label><br>
-              <input class="inputform" type="number" name="num" id="Number" placeholder="Number"><br><br>
-              <!-- Radio Button -->
-              <label>Gender</label><br>
-              <input type="radio" id="gender" name="gender" value="male">
-              <label for="male">Male</label><br>
-              <input type="radio" id="gender" name="gender" value="female">
-              <label for="female">Female</label><br>
-              <input type="radio" id="gender" name="gender" value="other">
-              <label for="other">Other</label><br><br>
-              <!-- Dropdown -->
-              <label for="branch" style="height: 1cm;width: 2cm;">Choose Your Branch:</label>
-                  <select id="branch" name="branch">
-                  <option value="CSE">CSE</option>
-                  <option value="IT">IT</option>
-                  <option value="CE">CE</option>
-                  <option value="ETC">ETC</option>
-                  <option value="EEE">EEE</option>
-                  </select><br><br>
-              <!-- Checkbox -->
-              <label >Select your Choice of Clubs in Tech Soc</label><br>
-              <input type="checkbox" id="checkbox" name="psoc" value="tech">
-              <label for="Tech"> Programming Society</label><br>
-              <input type="checkbox" id="checkbox" name="tars" value="cultural">
-              <label for="cultural"> Robotics Society</label><br><br>
-              <input 
-              style="align-self: center; width: 3cm; height: 1cm; border-radius: 3px;
-                color: white; background-color: #1e3f5a; opacity: 1;" 
-                     type="SUBMIT" 
-                     placeholder="SUBMIT">
-            </form>
-          </div>
+            <div class="formbody">
+                <form class="formMain" action="/registration" method="POST">
+                    <!-- Text Input -->
+                    <label for="name">Name</label><br>
+                    <input class="inputform" type="text" name="name" id="text" placeholder="Name"><br><br>
+                    <!-- Number Input -->
+                    <label for="num">Number</label><br>
+                    <input class="inputform" type="number" name="num" id="Number" placeholder="Number"><br><br>
+                    <!-- Radio Button -->
+                    <label>Gender</label><br>
+                    <input type="radio" id="gender" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="gender" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="gender" name="gender" value="other">
+                    <label for="other">Other</label><br><br>
+                    <!-- Dropdown -->
+                    <label for="branch" style="height: 1cm;width: 2cm;">Choose Your Branch:</label>
+                    <select id="branch" name="branch">
+                        <option value="CSE">CSE</option>
+                        <option value="IT">IT</option>
+                        <option value="CE">CE</option>
+                        <option value="ETC">ETC</option>
+                        <option value="EEE">EEE</option>
+                    </select><br><br>
+                    <!-- Checkbox -->
+                    <label>Select your Choice of Clubs in Tech Soc</label><br>
+                    <input type="checkbox" id="checkbox" name="psoc" value="tech">
+                    <label for="Tech"> Programming Society</label><br>
+                    <input type="checkbox" id="checkbox" name="tars" value="cultural">
+                    <label for="cultural"> Robotics Society</label><br><br>
+                    <input style="align-self: center; width: 3cm; height: 1cm; border-radius: 3px;
+                color: white; background-color: #1e3f5a; opacity: 1;" type="SUBMIT" placeholder="SUBMIT">
+                </form>
+            </div>
         </div>
         <!-- IMAGE GALLERY SECTION -->
         <div id="ImageGallery" class="tabcontent">
-          <h1>Image Gallery</h1>
-          <P>We will see how to make an Image Gallery using the above discussed properties</P>
+            <h1>Image Gallery</h1>
+            <P>We will see how to make an Image Gallery using the above discussed properties</P>
 
-          <h3>HTML and CSS for the gallery shown below</h3><br>
-          <h3>Code:</h3>
-          <div class="code">
-            <xmp>
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <title>Gallery</title>
-            <style>
-              .galleryImage{
-                width: 250px;
-                height: 250px;
-                margin-left: 2px;
-                margin-right: 2px;
-              }
-              .gallery{
-                float: left;
-              }
-              .imagelink:hover{
-                opacity: 0.6;
-              }
-            </style>
-          </head>
-          <body>
-            <div class="gallery">
-              <a href="images/gal1.jpg" class="imagelink">
-                <img src="images/gal1.jpg" class="galleryImage">
-              </a>
+            <h3>HTML and CSS for the gallery shown below</h3><br>
+            <h3>Code:</h3>
+            <div class="code">
+                <xmp>
+                    <!DOCTYPE html>
+                    <html lang="en">
+
+                    <head>
+                        <title>Gallery</title>
+                        <style>
+                            .galleryImage {
+                                width: 250px;
+                                height: 250px;
+                                margin-left: 2px;
+                                margin-right: 2px;
+                            }
+
+                            .gallery {
+                                float: left;
+                            }
+
+                            .imagelink:hover {
+                                opacity: 0.6;
+                            }
+                        </style>
+                    </head>
+
+                    <body>
+                        <div class="gallery">
+                            <a href="images/gal1.jpg" class="imagelink">
+                                <img src="images/gal1.jpg" class="galleryImage">
+                            </a>
+                        </div>
+                        <div class="gallery">
+                            <a href="images/gal2.jpg" class="imagelink">
+                                <img src="images/gal2.jpg" class="galleryImage">
+                            </a>
+                        </div>
+                        <div class="gallery">
+                            <a href="images/gal3.jpg" class="imagelink">
+                                <img src="images/gal3.jpg" class="galleryImage">
+                            </a>
+                        </div>
+                        .
+                        .
+                        <!-- More similar lines of code -->
+                    </body>
+
+                    </html>
+                </xmp>
+            </div><br>
+            <h3>Result:</h3><br>
+            <div>
+                <div class="gallery">
+                    <a href="images/gal1.jpg" class="imagelink">
+                        <img src="images/gal1.jpg" class="galleryImage">
+                    </a>
+                </div>
+                <div class="gallery">
+                    <a href="images/gal2.jpg" class="imagelink">
+                        <img src="images/gal2.jpg" class="galleryImage">
+                    </a>
+                </div>
+                <div class="gallery">
+                    <a href="images/gal3.jpg" class="imagelink">
+                        <img src="images/gal3.jpg" class="galleryImage">
+                    </a>
+                </div>
+                <div class="gallery">
+                    <a href="images/gal4.jpg" class="imagelink">
+                        <img src="images/gal4.jpg" class="galleryImage">
+                    </a>
+                </div>
+                <div class="gallery">
+                    <a href="images/gal5.jpg" class="imagelink">
+                        <img src="images/gal5.jpg" class="galleryImage">
+                    </a>
+                </div>
+                <div class="gallery">
+                    <a href="images/gal6.jpeg" class="imagelink">
+                        <img src="images/gal6.jpeg" class="galleryImage">
+                    </a>
+                </div>
+                <div class="gallery">
+                    <a href="images/gal7.jpg" class="imagelink">
+                        <img src="images/gal7.jpg" class="galleryImage">
+                    </a>
+                </div>
+                <div class="gallery">
+                    <a href="images/gal8.jpg" class="imagelink">
+                        <img src="images/gal8.jpg" class="galleryImage">
+                    </a>
+                </div>
             </div>
-            <div class="gallery">
-              <a href="images/gal2.jpg" class="imagelink">
-                <img src="images/gal2.jpg" class="galleryImage">
-              </a>
-            </div>
-            <div class="gallery">
-              <a href="images/gal3.jpg" class="imagelink">
-                <img src="images/gal3.jpg" class="galleryImage">
-              </a>
-            </div>
-            .
-            .
-            <!-- More similar lines of code -->
-          </body>
-          </html>
-            </xmp>
-          </div><br>
-          <h3>Result:</h3><br>
-          <div>
-            <div class="gallery">
-              <a href="images/gal1.jpg" class="imagelink">
-                <img src="images/gal1.jpg" class="galleryImage">
-              </a>
-            </div>
-            <div class="gallery">
-              <a href="images/gal2.jpg" class="imagelink">
-                <img src="images/gal2.jpg" class="galleryImage">
-              </a>
-            </div>
-            <div class="gallery">
-              <a href="images/gal3.jpg" class="imagelink">
-                <img src="images/gal3.jpg" class="galleryImage">
-              </a>
-            </div>
-            <div class="gallery">
-              <a href="images/gal4.jpg" class="imagelink">
-                <img src="images/gal4.jpg" class="galleryImage">
-              </a>
-            </div>
-            <div class="gallery">
-              <a href="images/gal5.jpg" class="imagelink">
-                <img src="images/gal5.jpg" class="galleryImage">
-              </a>
-            </div>
-            <div class="gallery">
-              <a href="images/gal6.jpeg" class="imagelink">
-                <img src="images/gal6.jpeg" class="galleryImage">
-              </a>
-            </div>
-            <div class="gallery">
-              <a href="images/gal7.jpg" class="imagelink">
-                <img src="images/gal7.jpg" class="galleryImage">
-              </a>
-            </div>
-            <div class="gallery">
-              <a href="images/gal8.jpg" class="imagelink">
-                <img src="images/gal8.jpg" class="galleryImage">
-              </a>
-            </div>
-          </div>
-          
-          
+
+
         </div>
 
 
         <!-- TEST YOURSELF SECTION -->
         <div id="Test" class="tabcontent">
-          <h1>Test Yourself</h1>
-          <h3>Problem Statement:</h3>
-          <h4 style="margin-bottom: 50px;">
-            Make an Exact Layout Of the UI provided below with a transistion from Page 1 to Page2 upon clicking "Register" 
-          </h4>
+            <h1>Test Yourself</h1>
+            <h3>Problem Statement:</h3>
+            <h4 style="margin-bottom: 50px;">
+                Make an Exact Layout Of the UI provided below with a transistion from Page 1 to Page2 upon
+                clicking
+                "Register"
+            </h4>
 
-          <h5>Page 1</h5>
-          <img  src="images/test1.png" class="testimg">
-          <h5>Page 2</h5>
-          <img src="images/test2.png" class="testimg">
+            <h5>Page 1</h5>
+            <img src="images/test1.png" class="testimg">
+            <h5>Page 2</h5>
+            <img src="images/test2.png" class="testimg">
 
-          <p>
-            <b>Tips for assesment:</b>
+            <p>
+                <b>Tips for assesment:</b>
             <ol>
-              <li>Make sure the UI is made responsive.</li>
-              <li>A dropdown Menu for Nav-Items in Mobile View.</li>
-              <li>The theme of all the components made same.</li>
-              <li>Design the theme components carefully.</li>
+                <li>Make sure the UI is made responsive.</li>
+                <li>A dropdown Menu for Nav-Items in Mobile View.</li>
+                <li>The theme of all the components made same.</li>
+                <li>Design the theme components carefully.</li>
             </ol>
-          </p>
+            </p>
 
-          <p>
-            <b>You can also try to:</b>
+            <p>
+                <b>You can also try to:</b>
             <ol>
-              <li>Make a photography portfolio using images from unsplash API.</li>
-              <li>Make your own portfolio website and host it using Github Pages.</li>
-              <li>Make your College Website and along with individual Clubs and Societies Website compiled into a single website. </li>
-              <li>Make a Fashion Designers Portfolio.</li>
-              <li>Make a Landing page for your Future StartUp. </li>
+                <li>Make a photography portfolio using images from unsplash API.</li>
+                <li>Make your own portfolio website and host it using Github Pages.</li>
+                <li>Make your College Website and along with individual Clubs and Societies Website compiled
+                    into a
+                    single
+                    website. </li>
+                <li>Make a Fashion Designers Portfolio.</li>
+                <li>Make a Landing page for your Future StartUp. </li>
             </ol>
-          </p>
+            </p>
         </div>
 
     </div>
