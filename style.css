@@ -13,7 +13,7 @@
 	height: 230px;
 	width: 15%;
 	border-top-left-radius: 230px;
-	background-color: rgb(36,36,36);
+	background-color: rgb(36, 36, 36);
 }
 .themeComponent2 {
 	position: fixed;
@@ -22,7 +22,7 @@
 	height: 100px;
 	width: 100px;
 	border-bottom-left-radius: 100px;
-	background-color: rgb(36,36,36);
+	background-color: rgb(36, 36, 36);
 }
 
 body {
@@ -30,7 +30,7 @@ body {
 }
 
 h1 {
-	color: rgb(36,36,36);
+	color: rgb(36, 36, 36);
 }
 
 @media screen and (max-height: 450px) {
@@ -42,13 +42,13 @@ h1 {
 	}
 }
 .tab {
-	height: 100%;
-	width: 15%;
+	height: 100vh;
+	width: 12%;
 	position: fixed;
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: rgb(36,36,36);
+	background-color: rgb(36, 36, 36);
 	overflow-x: ellipsis;
 	overflow: auto;
 }
@@ -66,7 +66,7 @@ h1 {
 
 /* Change background color of buttons on hover */
 .tab a:hover {
-	color: rgb(36,36,36);
+	color: rgb(36, 36, 36);
 	overflow-x: hidden;
 	background-color: white;
 }
@@ -74,12 +74,12 @@ h1 {
 /* Create an active/current "tab button" class */
 .tab a.active {
 	background-color: white;
-	color: rgb(36,36,36);
+	color: rgb(36, 36, 36);
 }
 
 /* Style the tab content */
 .tabcontent {
-	margin-left: 16%; /* to display sidenav */
+	margin-left: 14%; /* to display sidenav */
 	margin-right: 16%;
 	font-size: 1.3em;
 	padding: 0px 10px;
@@ -95,9 +95,6 @@ h1 {
 .gallery {
 	float: left;
 }
-.homeimg{
-	/* opacity: 0.5; */
-}
 
 .imagelink:hover {
 	/* border: 2px solid rgb(36,36,36); */
@@ -107,12 +104,12 @@ h1 {
 .testimg {
 	width: 100%;
 	/* margin-top: 5%; */
-	border: dotted 1px rgb(36,36,36);
+	border: dotted 1px rgb(36, 36, 36);
 	margin-bottom: 50px;
 }
 
 .code {
-	border: 1px solid rgb(36,36,36);
+	border: 1px solid rgb(36, 36, 36);
 	padding: 10px;
 	margin-bottom: 10px;
 	background-color: #f7f7f7;
@@ -124,7 +121,7 @@ h1 {
 	align-items: center;
 	font-family: 'Comic Neue', cursive;
 	/* background-color: whitesmoke; */
-	background-color: rgb(36,36,36);
+	background-color: rgb(36, 36, 36);
 
 	background-image: url('https://rb.gy/wcrqyy');
 }
@@ -145,10 +142,10 @@ h1 {
 	width: 50%;
 }
 input:hover {
-	border: 2px rgb(36,36,36) solid;
+	border: 2px rgb(36, 36, 36) solid;
 }
 input:active {
-	border: 3px rgb(36,36,36) solid;
+	border: 3px rgb(36, 36, 36) solid;
 }
 
 .overflowresult {

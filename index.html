@@ -32,14 +32,12 @@
         <a class="tablinks" onclick="openProperty(event, 'Forms')">Forms</a>
         <a class="tablinks" onclick="openProperty(event, 'ImageGallery')">Image Gallery</a>
         <a class="tablinks" onclick="openProperty(event, 'Test')">Test Yourself</a>
-
-
     </div>
     <div class="main">
 
         <div id="Home" class="tabcontent home">
             <h1><b>Welcome to CSS Tutorial!</b> <br> Let's have some fun</h1>
-            <img class="homeimg" src='images/home.jpg' width="100%" height="800px" >
+            <img class="homeimg" src='images/home.jpg' width="100%" height="800px">
             <div style="bottom: 0;position: fixed; padding: 40px; padding-bottom: 50px; color: white;">
                 <h4 style="text-align: left;">
                     What's in it for you ?
@@ -787,14 +785,198 @@
 
             </div>
         </div>
-
         <div id="Tables" class="tabcontent">
             <h1>Tables</h1>
-            <p>Reference "tables.html"</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum,
-                commodi
-                officiis
-                sunt neque, sit aliquam mollitia odio nemo?</p>
+            <p>
+                The look of an HTML table can be greatly improved with CSS:
+            </p>
+            <h3>
+                Table Borders
+            </h3>
+            <p>
+                To specify table borders in CSS, use the border property.
+                The example below specifies a black border for
+                table, th, and
+                td elements:
+            </p>
+            <h3>Example</h3>
+            <div class="code">
+                <pre>
+    table, th, td {
+        border: 1px solid black;
+    }
+                </pre>
+            </div>
+            <h3>Result</h3>
+            <table border=1>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                </tr>
+                <tr>
+                    <td>lorem</td>
+                    <td>epsom</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                </tr>
+            </table>
+
+            <p>Notice that the table in the example above has double borders. This is because both the table and
+                the th and td elements have separate borders.</p>
+            <h3>Collapse Table Borders</h3>
+            <p>The border-collapse property sets whether the table borders should be collapsed into a single
+                border:</p>
+            <h3>Example</h3>
+            <div class="code">
+                <pre>
+    table {
+        border-collapse: collapse;
+    }
+                    </pre>
+            </div>
+            <h3>Result</h3>
+            <table border=1 style="border-collapse: collapse">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                </tr>
+                <tr>
+                    <td>lorem</td>
+                    <td>epsom</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                </tr>
+            </table>
+
+            <p>If you only want a border around the table, only specify the border property for table:
+            </p>
+            <div class="code">
+                <pre>
+    table {
+        border: 1px solid black;
+    }
+                </pre>
+            </div>
+
+            <h3>Result</h3>
+            <table style="border:1px solid black">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                </tr>
+                <tr>
+                    <td>lorem</td>
+                    <td>epsom</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                </tr>
+            </table>
+
+            <h3>Table Width and Height</h3>
+            <p>Width and height of a table are defined by the width and height properties.
+
+                The example below sets the width of the table to 100%, and the height of the "th" elements to
+                50px:</p>
+            <div class="code">
+                <pre>
+    table {
+        width: 100%;
+    }
+    
+    th {
+        height: 50px;
+    }
+                    </pre>
+            </div>
+            <h3>Result</h3>
+            <table border=1 style="width: 100%;border-collapse: collapse">
+                <tr>
+                    <th style="height: 50px;">Firstname</th>
+                    <th style="height: 50px;">Lastname</th>
+                    <th style="height: 50px;">Savings</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>Swanson</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td>Cleveland</td>
+                    <td>Brown</td>
+                    <td>$250</td>
+                </tr>
+            </table>
+
+            <h3>HorizontalVertical Alignment</h3>
+            <p>
+                The text-align property sets the horizontal alignment (like left, right, or center) of the
+                content in "th" or "td".
+                <br>
+                By default, the content of "th" elements are center-aligned and the content of "td" elements are
+                left-aligned.
+            </p>
+            <p>
+                The vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in
+                th or td.
+                <br>
+                By default, the vertical alignment of the content in a table is middle (for both th and td elements).
+            </p>
+            <h3>Example</h3>
+            <div class="code">
+                <pre>
+    td {
+        height: 50px;
+        vertical-align: bottom;
+        text-align: center;
+    }
+                </pre>
+
+            </div>
+            <h3>Result</h3>
+            <table border=1 style="border-collapse: collapse;
+  width: 100%;">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Savings</th>
+                </tr>
+                <tr>
+                    <td style=" text-align: center;height: 50px;vertical-align: bottom;">Peter</td>
+                    <td style="text-align: center;height: 50px;vertical-align: bottom;"> Griffin</td>
+                    <td style="text-align: center;height: 50px;vertical-align: bottom;">$100</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;height: 50px;vertical-align: bottom;"> Lois</td>
+                    <td style="text-align:center;height: 50px;vertical-align: bottom;"> Griffin</td>
+                    <td style="text-align:center;height: 50px;vertical-align: bottom;"> $150</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;height: 50px;vertical-align: bottom;"> Joe</td>
+                    <td style="text-align:center;height: 50px;vertical-align: bottom;"> Swanson</td>
+                    <td style="text-align:center;height: 50px;vertical-align: bottom;"> $300</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;height: 50px;vertical-align: bottom;"> Cleveland</td>
+                    <td style="text-align:center;height: 50px;vertical-align: bottom;"> Brown</td>
+                    <td style="text-align:center;height: 50px;vertical-align: bottom;"> $250</td>
+                </tr>
+            </table>
         </div>
 
         <div id="Postion" class="tabcontent">
@@ -1047,26 +1229,28 @@
 
         <div id="Box Model" class="tabcontent">
             <h1>Box model</h1>
-            <p>All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
-            The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
-                
+            <p>All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about
+                design and layout.
+                The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins,
+                borders, padding, and the actual content.
+
                 Explanation of the different parts:
-                
-                <ul style="text-align: left;">
-                   
-                    <li> <b>Content - </b>  The content of the box, where text and images appear</li>
-                    <li><b>Padding - </b>   Clears an area around the content. The padding is transparent
-                    </li>
-                    <li> <b>Border - </b>  A border that goes around the padding and content</li>
-                    <li> <b>Margin - </b>  Clears an area outside the border. The margin is transparent
-                    </li>
-                </ul>
-                
-                The box model allows us to add a border around elements, and to define space between elements. </p>
-                <br>
-                <h2>Example 1</h2>
-                <div class="code">
-                    <pre>
+
+            <ul style="text-align: left;">
+
+                <li> <b>Content - </b> The content of the box, where text and images appear</li>
+                <li><b>Padding - </b> Clears an area around the content. The padding is transparent
+                </li>
+                <li> <b>Border - </b> A border that goes around the padding and content</li>
+                <li> <b>Margin - </b> Clears an area outside the border. The margin is transparent
+                </li>
+            </ul>
+
+            The box model allows us to add a border around elements, and to define space between elements. </p>
+            <br>
+            <h2>Example 1</h2>
+            <div class="code">
+                <pre>
             html:
             
             < h2>Demonstrating the Box Model< /h2>
@@ -1076,9 +1260,9 @@
             < div>This text is the content of the box. We have added a 50px padding ....< /div>
             
                             </pre>
-                </div>
-                <div class="code">
-                    <pre>
+            </div>
+            <div class="code">
+                <pre>
             CSS:
             
             div {
@@ -1089,58 +1273,71 @@
                 margin: 20px;
               }
                             </pre>
-                </div>
-                <h3>Result</h3>
-                <div class="code">
-                    <style>
-                        .boxmodel {
-                          background-color: lightgrey;
-                          width: 400px;
-                          border: 15px solid green;
-                          padding: 50px;
-                          margin: 20px;
-                        }
-                        </style>
-                        </head>
-                        <body>
-                        
-                        <h2>Demonstrating the Box Model</h2>
-                        
-                        <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.</p>
-                        
-                        <div class="boxmodel">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.< /div>
-                        </div>
-                        <h2>Width and Height of an Element</h5>
-                           <p> In order to set the width and height of an element correctly in all browsers, you need to know how the box model works.
+            </div>
+            <h3>Result</h3>
+            <div class="code">
+                <style>
+                    .boxmodel {
+                        background-color: lightgrey;
+                        width: 400px;
+                        border: 15px solid green;
+                        padding: 50px;
+                        margin: 20px;
+                    }
+                </style>
+                </head>
+
+                <body>
+
+                    <h2>Demonstrating the Box Model</h2>
+
+                    <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of:
+                        borders, padding, margins, and the actual content.</p>
+
+                    <div class="boxmodel">This text is the content of the box. We have added a 50px padding, 20px margin
+                        and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.< /div>
+                    </div>
+                    <h2>Width and Height of an Element</h5>
+                        <p> In order to set the width and height of an element correctly in all browsers, you need to
+                            know how the box model works.
                             <b>Here is the calculation:</b><br><br>
                             <b>320px (width)<br>
-                            + 20px (left + right padding)<br>
-                            + 10px (left + right border)<br>
-                            + 0px (left + right margin)<br>
-                            = 350px</b>
-                           </p>
-                           <p style="font-size: larger;">The total width of an element should be calculated like this:<br>
+                                + 20px (left + right padding)<br>
+                                + 10px (left + right border)<br>
+                                + 0px (left + right margin)<br>
+                                = 350px</b>
+                        </p>
+                        <p style="font-size: larger;">The total width of an element should be calculated like this:<br>
 
-                            Total element width = width + left padding + right padding + left border + right border + left margin + right margin<br>
-                            
+                            Total element width = width + left padding + right padding + left border + right border +
+                            left margin + right margin<br>
+
                             The total height of an element should be calculated like this:<br>
-                            
-                            Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</p>
 
-                        <p style="font-size: larger; background: coral;"><B>Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area.<br> To calculate the full size of an element, you must also add padding, borders and margins.
-                        </B>
-                        </p> 
-                         
-                    </div>
-        </div>      
+                            Total element height = height + top padding + bottom padding + top border + bottom border +
+                            top margin + bottom margin</p>
+
+                        <p style="font-size: larger; background: coral;"><B>Important: When you set the width and height
+                                properties of an element with CSS, you just set the width and height of the content
+                                area.<br> To calculate the full size of an element, you must also add padding, borders
+                                and margins.
+                            </B>
+                        </p>
+
+            </div>
+        </div>
 
         <div id="Layout" class="tabcontent">
             <h1>CSS Website Layout</h1>
             <p>A website is often divided into headers, menus, content and a footer:</p>
-            <img src="images/weblayout.png"  width="1000" height="500">
+            <img src="images/weblayout.png" width="1000" height="500">
             <h2>Responsive Website Layout</h2>
-            <p>By using some of the CSS code above, we have created a responsive website layout,<br> which varies between two columns and full-width columns depending on screen width:</p>
-        
+            <p>By using some of the CSS code above, we have created a responsive website layout,<br> which varies
+                between two columns and full-width columns depending on screen width:</p>
+
             <h2>Example 1</h2>
             <div class="code">
                 <pre>
@@ -1286,200 +1483,210 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
 &lt;/html&gt;
 
                         </pre>
-                        <h3>Result</h3>
-                        <div class="code">
-                            <!DOCTYPE html>
-<html>
-<head>
-<style>
+                <h3>Result</h3>
+                <div class="code">
+                    <!DOCTYPE html>
+                    <html>
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white;
-}
+                    <head>
+                        <style>
+                            /* Header/Blog Title */
+                            .header {
+                                padding: 30px;
+                                text-align: center;
+                                background: white;
+                            }
 
-.header h1 {
-  font-size: 50px;
-}
+                            .header h1 {
+                                font-size: 50px;
+                            }
 
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
+                            /* Style the top navigation bar */
+                            .topnav {
+                                overflow: hidden;
+                                background-color: #333;
+                            }
 
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+                            /* Style the topnav links */
+                            .topnav a {
+                                float: left;
+                                display: block;
+                                color: #f2f2f2;
+                                text-align: center;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                            }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+                            /* Change color on hover */
+                            .topnav a:hover {
+                                background-color: #ddd;
+                                color: black;
+                            }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
+                            /* Create two unequal columns that floats next to each other */
+                            /* Left column */
+                            .leftcolumn {
+                                float: left;
+                                width: 75%;
+                            }
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
+                            /* Right column */
+                            .rightcolumn {
+                                float: left;
+                                width: 25%;
+                                background-color: #f1f1f1;
+                                padding-left: 20px;
+                            }
 
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
+                            /* Fake image */
+                            .fakeimg {
+                                background-color: #aaa;
+                                width: 100%;
+                                padding: 20px;
+                            }
 
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
+                            /* Add a card effect for articles */
+                            .card {
+                                background-color: white;
+                                padding: 20px;
+                                margin-top: 20px;
+                            }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+                            /* Clear floats after the columns */
+                            .row:after {
+                                content: "";
+                                display: table;
+                                clear: both;
+                            }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
+                            /* Footer */
+                            .footer {
+                                padding: 20px;
+                                text-align: center;
+                                background: #ddd;
+                                margin-top: 20px;
+                            }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
+                            /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+                            @media screen and (max-width: 800px) {
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
-</style>
-</head>
-<body>
+                                .leftcolumn,
+                                .rightcolumn {
+                                    width: 100%;
+                                    padding: 0;
+                                }
+                            }
 
-<div class="header">
-  <h1>Test</h1>
-  <p>Resize the browser window to see the effect.</p>
-</div>
+                            /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+                            @media screen and (max-width: 400px) {
+                                .topnav a {
+                                    float: none;
+                                    width: 100%;
+                                }
+                            }
+                        </style>
+                    </head>
 
-<div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" style="float:right">Link</a>
-</div>
+                    <body>
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>Your Heading</h2>
-      <h5>Title description</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p><b>JSON</b></p>
-      <p>JSON stands for JavaScript Object Notation. JSON is a standard lightweight data-interchange format which is quick and easy to parse and generate.
+                        <div class="header">
+                            <h1>Test</h1>
+                            <p>Resize the browser window to see the effect.</p>
+                        </div>
 
-JSON, like XML, is a text-based format that's easy to write and easy to understand for both humans and computers, but unlike XML, JSON data structures occupy less bandwidth than their XML versions.</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Anything......</p>
-    </div>
-  </div>
-</div>
+                        <div class="topnav">
+                            <a href="#">Link</a>
+                            <a href="#">Link</a>
+                            <a href="#">Link</a>
+                            <a href="#" style="float:right">Link</a>
+                        </div>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+                        <div class="row">
+                            <div class="leftcolumn">
+                                <div class="card">
+                                    <h2>Your Heading</h2>
+                                    <h5>Title description</h5>
+                                    <div class="fakeimg" style="height:200px;">Image</div>
+                                    <p><b>JSON</b></p>
+                                    <p>JSON stands for JavaScript Object Notation. JSON is a standard lightweight
+                                        data-interchange format which is quick and easy to parse and generate.
 
-</body>
-</html>
-        </div>
-        </div>
+                                        JSON, like XML, is a text-based format that's easy to write and easy to
+                                        understand for both humans and computers, but unlike XML, JSON data structures
+                                        occupy less bandwidth than their XML versions.</p>
+                                </div>
+                            </div>
+                            <div class="rightcolumn">
+                                <div class="card">
+                                    <h2>About Me</h2>
+                                    <div class="fakeimg" style="height:100px;">Image</div>
+                                    <p>Anything......</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer">
+                            <h2>Footer</h2>
+                        </div>
+
+                    </body>
+
+                    </html>
+                </div>
+            </div>
         </div>
 
         <div id="Combinators" class="tabcontent">
             <h1>Combinators</h1>
             <p>A combinator is something that explains the relationship between the selectors.
 
-                A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+                A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a
+                combinator.
                 There are four different combinators in CSS:</p>
-                <ul style="text-align: left;">
+            <ul style="text-align: left;">
 
-                    <li> <b>descendant selector (space) </b></li>
-                    <li><b>child selector (>)</b>
-                    </li>
-                    <li> <b>adjacent sibling selector (+)</b></li>
-                    <li> <b>general sibling selector (~) </b>
-                    </li>
-                </ul>
-                <h3 style="font-size: larger; text-decoration: underline;">Descendant Selector</h3>
-                <p>The descendant selector matches all elements that are descendants of a specified element.<br>
+                <li> <b>descendant selector (space) </b></li>
+                <li><b>child selector (>)</b>
+                </li>
+                <li> <b>adjacent sibling selector (+)</b></li>
+                <li> <b>general sibling selector (~) </b>
+                </li>
+            </ul>
+            <h3 style="font-size: larger; text-decoration: underline;">Descendant Selector</h3>
+            <p>The descendant selector matches all elements that are descendants of a specified element.<br>
 
-                    The following example selects all < p> elements inside < div> elements: <br><br>
-                    
-                    Example:<br>
-                    <b>div p {
-                      background-color: yellow;
-                    }</b></p>
-                    <h4 style="font-size: larger;text-decoration: underline;">Child Selector</h4>
-                    <p>The child selector selects all elements that are the children of a specified element.<br>
+                The following example selects all < p> elements inside < div> elements: <br><br>
 
-                        The following example selects all < p> elements that are children of a < div> element: <br><br>
-                        
+                        Example:<br>
+                        <b>div p {
+                            background-color: yellow;
+                            }</b></p>
+            <h4 style="font-size: larger;text-decoration: underline;">Child Selector</h4>
+            <p>The child selector selects all elements that are the children of a specified element.<br>
+
+                The following example selects all < p> elements that are children of a < div> element: <br><br>
+
                         Example:<br>
                         <b>div > p {
                             background-color: yellow;
-                          }</b></p>
-                    <h5 style="font-size: larger;text-decoration: underline;">Adjacent Sibling Selector</h5>
-                    <p>The adjacent sibling selector selects all elements that are the adjacent siblings of a specified element.<br>
+                            }</b></p>
+            <h5 style="font-size: larger;text-decoration: underline;">Adjacent Sibling Selector</h5>
+            <p>The adjacent sibling selector selects all elements that are the adjacent siblings of a specified
+                element.<br>
 
-                        Sibling elements must have the same parent element, and "adjacent" means "immediately following".<br>
-                        
-                        The following example selects all <p> elements that are placed immediately after <div> elements: <br><br>
-                        
-                        Example:<br>
-                        <b>div + p {
-                            background-color: yellow;
-                          }</b></p>
-                       
+                Sibling elements must have the same parent element, and "adjacent" means "immediately following".<br>
+
+                The following example selects all
+            <p> elements that are placed immediately after
+            <div> elements: <br><br>
+
+                Example:<br>
+                <b>div + p {
+                    background-color: yellow;
+                    }</b></p>
+
+            </div>
         </div>
-    </div>
-
 
         <div id="PseudoClass" class="tabcontent">
             <h1>Pseudo Class and Elements</h1>
@@ -1488,7 +1695,6 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
                 officiis
                 sunt neque, sit aliquam mollitia odio nemo?</p>
         </div>
-
         <div id="Forms" class="tabcontent">
             <h1>Forms</h1>
 
@@ -1568,7 +1774,7 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
                         <input type="checkbox" id="checkbox" name="tars" value="cultural">
                         <label for="cultural"> Robotics Society</label><br>
                         <input style="align-self: center; width: 2cm; color:
-              brown; background-color: rgb(255, 255, 255);" type="submit" placeholder="SUBMIT">
+                              brown; background-color: rgb(255, 255, 255);" type="submit" placeholder="SUBMIT">
                     </form>
                 </xmp>
             </div>
@@ -1605,10 +1811,12 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
                     <input type="checkbox" id="checkbox" name="tars" value="cultural">
                     <label for="cultural"> Robotics Society</label><br><br>
                     <input style="align-self: center; width: 3cm; height: 1cm; border-radius: 3px;
-                color: white; background-color: #1e3f5a; opacity: 1;" type="SUBMIT" placeholder="SUBMIT">
+                                color: white; background-color: #1e3f5a; opacity: 1;" type="SUBMIT"
+                        placeholder="SUBMIT">
                 </form>
             </div>
         </div>
+
         <!-- IMAGE GALLERY SECTION -->
         <div id="ImageGallery" class="tabcontent">
             <h1>Image Gallery</h1>
@@ -1618,51 +1826,39 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
             <h3>Code:</h3>
             <div class="code">
                 <xmp>
-                    <!DOCTYPE html>
-                    <html lang="en">
+                    <style>
+                        .galleryImage {
+                            width: 250px;
+                            height: 250px;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                        }
 
-                    <head>
-                        <title>Gallery</title>
-                        <style>
-                            .galleryImage {
-                                width: 250px;
-                                height: 250px;
-                                margin-left: 2px;
-                                margin-right: 2px;
-                            }
+                        .gallery {
+                            float: left;
+                        }
 
-                            .gallery {
-                                float: left;
-                            }
+                        .imagelink:hover {
+                            opacity: 0.6;
+                        }
+                    </style>
 
-                            .imagelink:hover {
-                                opacity: 0.6;
-                            }
-                        </style>
-                    </head>
 
-                    <body>
-                        <div class="gallery">
-                            <a href="images/gal1.jpg" class="imagelink">
-                                <img src="images/gal1.jpg" class="galleryImage">
-                            </a>
-                        </div>
-                        <div class="gallery">
-                            <a href="images/gal2.jpg" class="imagelink">
-                                <img src="images/gal2.jpg" class="galleryImage">
-                            </a>
-                        </div>
-                        <div class="gallery">
-                            <a href="images/gal3.jpg" class="imagelink">
-                                <img src="images/gal3.jpg" class="galleryImage">
-                            </a>
-                        </div>
-                        .
-                        .
-                        <!-- More similar lines of code -->
-                    </body>
-
-                    </html>
+                    <div class="gallery">
+                        <a href="images/gal1.jpg" class="imagelink">
+                            <img src="images/gal1.jpg" class="galleryImage">
+                        </a>
+                    </div>
+                    <div class="gallery">
+                        <a href="images/gal2.jpg" class="imagelink">
+                            <img src="images/gal2.jpg" class="galleryImage">
+                        </a>
+                    </div>
+                    <div class="gallery">
+                        <a href="images/gal3.jpg" class="imagelink">
+                            <img src="images/gal3.jpg" class="galleryImage">
+                        </a>
+                    </div>
                 </xmp>
             </div><br>
             <h3>Result:</h3><br>
