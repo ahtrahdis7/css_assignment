@@ -78,19 +78,21 @@
                 <p>Here, all &lt;p&gt; elements on the page will be
                     center-aligned, with a red text color</p>
                 <div class="code">
-                    <xmp>
-                        html:
+                    <pre>
+    html:
 
-                        <p>This is center-aligned, with a red text color</p>
-                    </xmp>
-                    <xmp>
-                        CSS:
+        &lt;p>This is center-aligned, with a red text color&lt;/p>
+                    </pre>
+                </div>
+                <div class="code">
+                    <pre>
+    CSS:
 
-                        p {
-                        text-align: center;
-                        color: red;
-                        }
-                    </xmp>
+        p {
+            text-align: center;
+            color: red;
+        }
+                    </pre>
                 </div>
                 <h3>Result</h3>
                 <div class="code">
@@ -108,19 +110,19 @@
                 <h3>Example</h3>
                 <p>The CSS rule below will be applied to the HTML element with id="para1"</p>
                 <div class="code">
-                    <xmp>
-                        html:
+                    <pre>
+    html:
+    
+        &lt;p id="para1">This is center-aligned, with a red text color&lt;/p>
+                    </pre>
+                    <pre>
+    CSS:
 
-                        <p id="para1">This is center-aligned, with a red text color</p>
-                    </xmp>
-                    <xmp>
-                        CSS:
-
-                        #para1 {
-                        text-align: center;
-                        color: blue;
-                        }
-                    </xmp>
+        #para1 {
+            text-align: center;
+            color: blue;
+        }
+                    </pre>
                 </div>
                 <h3>Result</h3>
                 <div class="code">
@@ -139,19 +141,21 @@
                 <p>In this example all HTML elements with class=&quot;center&quot; will be red and center-aligned:&nbsp;
                 </p>
                 <div class="code">
-                    <xmp>
-                        html:
-
-                        <p class="para2">This is center-aligned, with a red text color</p>
-                    </xmp>
-                    <xmp>
-                        CSS:
-
-                        #para2 {
-                        text-align: center;
-                        color: green;
-                        }
-                    </xmp>
+                    <pre>
+    html:
+    
+        &lt;p class="para2">This is center-aligned, with a red text color&lt;/p>
+                    </pre>
+                </div>
+                <div class="code">
+                    <pre>
+    CSS:
+    
+        #para2 {
+            text-align: center;
+            color: green;
+        }
+                    </pre>
                 </div>
                 <h3>Result</h3>
                 <div class="code">
@@ -168,12 +172,12 @@
                 <h3>Example</h3>
                 <p>The CSS rule below will affect every HTML element on the page:&nbsp;</p>
                 <div class="code">
-                    <xmp>
-                        * {
-                        text-align: center;
-                        color: red;
-                        }
-                    </xmp>
+                    <pre>
+    * {
+        text-align: center;
+        color: red;
+    }
+                    </pre>
                 </div>
             </div>
 
@@ -184,12 +188,12 @@
                 <p>Look at the following CSS code (the h1, h2, and p elements have the same
                     style definitions):</p>
                 <div class="code">
-                    <xmp>
-                        h1, h2, p {
-                        text-align: center;
-                        color: red;
-                        }
-                    </xmp>
+                    <pre>
+    h1, h2, p {
+        text-align: center;
+        color: red;
+    }
+                    </pre>
                 </div>
                 <p>It will be better to group the selectors, to minimize the code.</p>
                 <p>To group selectors, separate each selector with a comma.</p>
@@ -197,11 +201,142 @@
 
         </div>
         <div id="Background" class="tabcontent">
-            <h1>Background</h1>
-            <p>Discuss "Opacity" Here.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quisquam quod nemo repellendus
-                magnam sequi
-                sunt cum consectetur rerum molestiae!</p>
+            <h3>The CSS background properties are used to define the background effects for elements.</h3>
+            <div>
+                <h1>CSS background-color</h1>
+                <p>
+                    The background-color property specifies the background color of an element.
+                </p>
+                <p>
+                    The background color of a page is set like this:
+                </p>
+                <div class="code">
+                    <pre>
+    body {
+        background-color: lightblue;
+    }
+                     </pre>
+                </div>
+                <p>You can set the background color for any HTML elements: <br>
+                    Here, the h1 , p, and
+                    div elements will have different background colors:
+                </p>
+                <div class="code">
+                    <pre>
+    h1 {
+        background-color: green;
+    }
+    
+    div {
+        background-color: lightblue;
+    }
+    
+    p {
+        background-color: yellow;
+    }
+
+                     </pre>
+                </div>
+            </div>
+            <div>
+                <h1>Opacity / Transparency
+                </h1>
+                <p>The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 -
+                    1.0. The lower
+                    value, the more transparent:</p>
+                <h3>Example</h3>
+                <div class="code">
+                    <pre>
+    HTML:
+
+        &lt;div class="first">
+            &lt;h1>opacity 0.4&lt;/h1>
+        &lt;/div>
+        
+        &lt;div class="second">
+            &lt;h1>opacity 0.4&lt;/h1>
+        &lt;/div>
+        
+        &lt;div class="third">
+            &lt;h1>opacity 0.6&lt;/h1>
+        &lt;/div>
+                    </pre>
+                </div>
+                <div class="code">
+
+                    <pre>
+    CSS:
+
+        div {
+            background-color: green;
+        }
+
+        div.first {
+            opacity: 0.2;
+        }
+
+        div.second {
+            opacity: 0.4;
+        }
+
+        div.third {
+            opacity: 0.6;
+        }
+                    </pre>
+                </div>
+                <h3>Result</h3>
+                <div class="code">
+                    <div style="opacity: 0.2;">
+                        <h1>opacity 0.2</h1>
+                    </div>
+
+                    <div style="opacity: 0.4;">
+                        <h1>opacity 0.4</h1>
+                    </div>
+
+                    <div style="opacity: 0.6;">
+                        <h1>opacity 0.6</h1>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1>
+                    CSS background-image
+
+                </h1>
+                <p>The background-image property specifies an image to use as the background of an element. <br>
+
+                    By default, the image is repeated so it covers the entire element.</p>
+                <div class="code">
+                    <pre>
+    body {
+        background-image: url("pic.jpg");
+    }
+                        </pre>
+                </div>
+                <h3>CSS background-repeat</h3>
+                <p>By default, the background-image property repeats an image both horizontally and vertically.</p>
+                <h3>CSS background-position</h3>
+                <p>The background-position property is used to specify the position of the background image.</p>
+                <h3>Example</h3>
+                <div class="code">
+                    <pre>
+    body {
+        background-image: url("pic.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+                    </pre>
+                </div>
+                <h3>Result</h3>
+                <div style="background-image: url('images/gal4.jpg');
+                 background-repeat: no-repeat;
+                background-position: center;
+                height: 80vh;
+                ">
+                </div>
+            </div>
+
         </div>
 
         <div id="Text Formatting" class="tabcontent">
@@ -465,7 +600,6 @@
                     closest available
                     weight.
                 </p>
-
             </div>
         </div>
 
@@ -500,37 +634,38 @@
                 <li> <b>Default - </b>The overflow is not clipped. The content renders outside the element's
                     box
                 </li>
-                <li> <b>hidden - </b>  The overflow is clipped, and the rest of the content will be invisible</li>
+                <li> <b>hidden - </b> The overflow is clipped, and the rest of the content will be invisible</li>
                 <li><b>scroll - </b> The overflow is clipped, and a scrollbar is added to see the rest of the content
                 </li>
                 <li> <b>auto - </b> Similar to scroll, but it adds scrollbars only when necessary</li>
             </ul>
 
             <h2>Example</h2>
-                <div class="code">
-                    <pre>
+            <div class="code">
+                <pre>
     html:
-
-    &lt;h1&gt;You can use the overflow property when you want to have better control of the layout.<br> The overflow property specifies what happens if content overflows an element's box.&lt;h1&gt;
-                    </pre>
-                </div>
-                <div class="code">
-                    <pre>
+        
+        &lt;h1&gt;You can use the overflow property when you want to have better control of the layout.<br> The overflow property specifies what happens if content overflows an element's box.&lt;h1&gt;
+                            </pre>
+            </div>
+            <div class="code">
+                <pre>
     CSS:
 
-    div {
+        div {
         background-color: #eee;
         width: 200px;
         height: 100px;
         border: 1px dotted black;
         overflow: scroll;
-    }
-                    </pre>
-                </div>
-                <h3>Result</h3>
-                <div class="code">
-                    <h5 class="overflowresult">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</h1>
-                </div>
+        }
+                            </pre>
+            </div>
+            <h3>Result</h3>
+            <div class="code">
+                <h5 class="overflowresult">You can use the overflow property when you want to have better control of the
+                    layout. The overflow property specifies what happens if content overflows an element's box.</h1>
+            </div>
 
             <br>
             <p>P.S - You can try other overflow options just by changing it in div style tag.</p><br>
@@ -557,174 +692,177 @@
             <h2>Example 1</h2>
             <div class="code">
                 <pre>
-html:
-
-< div class="container">
-    < img src="img_avatar.png" alt="Avatar" class="image">
-    < div class="overlay">
-      < a href="#" class="icon" title="User Profile">
-        < i class="fa fa-user">< /i>
-      < /a>
-    < /div>
-  < /div>
-                </pre>
+        html:
+        
+        < div class="container">
+            < img src="img_avatar.png" alt="Avatar" class="image">
+            < div class="overlay">
+              < a href="#" class="icon" title="User Profile">
+                < i class="fa fa-user">< /i>
+              < /a>
+            < /div>
+          < /div>
+                        </pre>
             </div>
             <div class="code">
                 <pre>
-CSS:
-
-.container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  /* Make the image to responsive */
-  .image {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* The overlay effect (full height and width) - lays on top of the container and over the image */
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .3s ease;
-    background-color: red;
-  }
-  
-  /* When you mouse over the container, fade in the overlay icon*/
-  .container:hover .overlay {
-    opacity: 1;
-  }
-  
-  /* The icon inside the overlay is positioned in the middle vertically and horizontally */
-  .icon {
-    color: white;
-    font-size: 100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  /* When you move the mouse over the icon, change color */
-  .fa-user:hover {
-    color: #eee;
-  }
-                </pre>
+        CSS:
+        
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+          }
+          
+          /* Make the image to responsive */
+          .image {
+            width: 100%;
+            height: auto;
+          }
+          
+          /* The overlay effect (full height and width) - lays on top of the container and over the image */
+          .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease;
+            background-color: red;
+          }
+          
+          /* When you mouse over the container, fade in the overlay icon*/
+          .container:hover .overlay {
+            opacity: 1;
+          }
+          
+          /* The icon inside the overlay is positioned in the middle vertically and horizontally */
+          .icon {
+            color: white;
+            font-size: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+          }
+          
+          /* When you move the mouse over the icon, change color */
+          .fa-user:hover {
+            color: #eee;
+          }
+                        </pre>
             </div>
             <h3>Result</h3>
             <div class="code">
                 <style>
                     .container {
-                      position: relative;
-                      width: 100%;
-                      max-width: 400px;
+                        position: relative;
+                        width: 100%;
+                        max-width: 400px;
                     }
-                    
+
                     .image {
-                      display: block;
-                      width: 100%;
-                      height: auto;
+                        display: block;
+                        width: 100%;
+                        height: auto;
                     }
-                    
+
                     .overlay {
-                      position: absolute;
-                      top: 0;
-                      bottom: 0;
-                      left: 0;
-                      right: 0;
-                      height: 100%;
-                      width: 100%;
-                      opacity: 0;
-                      transition: .3s ease;
-                      background-color: red;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 100%;
+                        width: 100%;
+                        opacity: 0;
+                        transition: .3s ease;
+                        background-color: red;
                     }
-                    
+
                     .container:hover .overlay {
-                      opacity: 1;
+                        opacity: 1;
                     }
-                    
+
                     .icon {
-                      color: white;
-                      font-size: 100px;
-                      position: absolute;
-                      top: 50%;
-                      left: 50%;
-                      transform: translate(-50%, -50%);
-                      -ms-transform: translate(-50%, -50%);
-                      text-align: center;
+                        color: white;
+                        font-size: 100px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        text-align: center;
                     }
-                    
+
                     .fa-user:hover {
-                      color: #eee;
+                        color: #eee;
                     }
-                    </style>
-                    </head>
-                    <body>
-                    
+                </style>
+                </head>
+
+                <body>
+
                     <h2>Fade in Overlay Icon</h2>
                     <p>Hover over the image to see the effect.</p>
-                    
+
                     <div class="container">
-                      <img src="images/gal2.jpg" alt="Avatar" class="image">
-                      <div class="overlay">
-                      <a href="#" class="icon" title="User Profile">
-                        <i class="fa fa-user"></i>
-                      </a>
-                      </div>
+                        <img src="images/gal2.jpg" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <a href="#" class="icon" title="User Profile">
+                                <i class="fa fa-user"></i>
+                            </a>
+                        </div>
                     </div>
-                    
+
             </div>
 
-        <br>
-        <h2>Image Filters</h2>
+            <br>
+            <h2>Image Filters</h2>
             <p>The CSS filter property adds visual effects (like blur and saturation) to an element.</p>
 
             <h2>Example 2</h2>
             <div class="code">
                 <pre>
-html:
-< p>Apply a blur effect to the image:< /p>
-< img src="images/gal1.jpg" alt="img_avatar" width="300" height="300">
-                </pre>
+        html:
+        < p>Apply a blur effect to the image:< /p>
+        < img src="images/gal1.jpg" alt="img_avatar" width="300" height="300">
+                        </pre>
             </div>
             <div class="code">
                 <pre>
-CSS:
-
-img {
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
-  }
-                </pre>
+        CSS:
+        
+        img {
+            -webkit-filter: blur(5px);
+            filter: blur(5px);
+          }
+                        </pre>
             </div>
             <h4>Result</h4>
             <div class="code">
                 <style>
-                    .imgblur{
-                      -webkit-filter: blur(5px); 
-                      filter: blur(5px);
+                    .imgblur {
+                        -webkit-filter: blur(5px);
+                        filter: blur(5px);
                     }
-                    </style>
-                    </head>
-                    <body>
-                    
+                </style>
+                </head>
+
+                <body>
+
                     <p>Apply a blur effect to the image:</p>
-                    
+
                     <img src="images/gal1.jpg" alt="" class="imgblur" width="300" height="300">
-                    
+
             </div>
-            <p style="font-size:larger;"><b><a href="https://www.w3schools.com/howto/howto_css_image_overlay.asp"> Explre other images effects and try them out.</a></b></p>
+            <p style="font-size:larger;"><b><a href="https://www.w3schools.com/howto/howto_css_image_overlay.asp">
+                        Explre other images effects and try them out.</a></b></p>
 
         </div>
 
