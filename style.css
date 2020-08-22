@@ -2,11 +2,11 @@
 	box-sizing: border-box;
 }
 
-.home{
+.home {
 	text-align: center;
 }
 
-.themeComponent1{
+.themeComponent1 {
 	position: fixed;
 	bottom: 0;
 	right: 0;
@@ -15,7 +15,7 @@
 	border-top-left-radius: 230px;
 	background-color: #1e3f5a;
 }
-.themeComponent2{
+.themeComponent2 {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -29,7 +29,7 @@ body {
 	font-family: 'Comic Neue', cursive;
 }
 
-h1{
+h1 {
 	color: #1e3f5a;
 }
 
@@ -69,7 +69,6 @@ h1{
 	color: #1e3f5a;
 	overflow-x: hidden;
 	background-color: white;
-
 }
 
 /* Create an active/current "tab button" class */
@@ -86,38 +85,38 @@ h1{
 	padding: 0px 10px;
 }
 
-.galleryImage{
+.galleryImage {
 	width: 250px;
 	height: 250px;
 	margin-left: 2px;
 	margin-right: 2px;
 }
 
-.gallery{
+.gallery {
 	float: left;
 }
 
-.imagelink:hover{
+.imagelink:hover {
 	/* border: 2px solid #1e3f5a; */
 	opacity: 0.6;
 }
 
-.testimg{
+.testimg {
 	width: 100%;
 	/* margin-top: 5%; */
 	border: dotted 1px #1e3f5a;
 	margin-bottom: 50px;
 }
 
-.code{
+.code {
 	border: 1px solid #1e3f5a;
-	padding: 5px;
+	padding: 10px;
 	margin-bottom: 10px;
 	background-color: #f7f7f7;
 }
 
 /* form css */
-.formbody{
+.formbody {
 	padding: 1cm;
 	align-items: center;
 	font-family: 'Comic Neue', cursive;
@@ -126,13 +125,13 @@ h1{
 
 	background-image: url('https://rb.gy/wcrqyy');
 }
-.inputform{
+.inputform {
 	width: 10.5cm;
 	height: 1cm;
 	font-size: large;
 	font-family: 'Courier New', Courier, monospace;
 }
-.formMain{
+.formMain {
 	border: 1px solid black;
 	padding: 1cm;
 	opacity: 1;
@@ -142,9 +141,9 @@ h1{
 	font-size: 20px;
 	width: 50%;
 }
-input:hover{
-  border: 2px #1e3f5a solid;
+input:hover {
+	border: 2px #1e3f5a solid;
 }
-input:active{
+input:active {
 	border: 3px #1e3f5a solid;
 }

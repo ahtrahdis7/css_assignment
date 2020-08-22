@@ -205,8 +205,268 @@
         </div>
 
         <div id="Text Formatting" class="tabcontent">
-            <h1>Text Formatting and Links</h1>
-            <p>Cover "Font" Properties Here</p>
+            <h1>Styling Fonts with CSS</h1>
+            <p>
+                Choosing the right font and style is very crucial for the readability of text on a page. <br>
+                CSS provide several properties for styling the font of the text, including changing their face,
+                controlling their size and boldness, managing variant, and so on.
+            </p>
+            <p>
+                The font properties are: <b>font-family</b>, <b>font-style</b>, <b>font-weight</b>, <b>font-size</b>,
+                and <b>font-variant</b>.
+            </p>
+            <div>
+                <h2>
+                    Font Family:
+                </h2>
+                <p>
+                    The font-family property is used to specify the font to be used to render the text. <br>
+                    This property can hold several comma-separated font names as a fallback system, so that if the first
+                    font is not available on the user's system, browser tries to use the second one, and so on. <br>
+                    Hence, list the font that you want first, then any fonts that might fill in for the first if it is
+                    not available. You should end the list with a generic font family which are five — serif,
+                    sans-serif,monospace,cursive and fantasy. A typical font family declaration might look like this:
+                </p>
+                <h3>Example</h3>
+                <div class="code">
+                    <pre>
+    html:
+
+        &lt;h1&gt;Here the font-family is "monospace".&lt;/h1&gt;
+                    </pre>
+                </div>
+                <div class="code">
+                    <pre>
+    CSS:
+
+        h1 {
+            font-family:monospace;
+        }
+                    </pre>
+                </div>
+                <h3>Result</h3>
+                <div class="code">
+                    <h1 style="font-family: monospace;">Here the font-family is "monospace". </h1>
+                </div>
+            </div>
+            <div>
+                <h2>
+                    Font Style:
+                </h2>
+                <p>
+                    The font-style property is used to set the font face style for the text content of an element. <br>
+                    The font style can be <b>normal</b>, <b>italic</b> or <b>oblique</b>. The default value is normal.
+                    <br>
+                    Let's try out the following example to understand how it basically works:
+                </p>
+                <h3>Example</h3>
+                <div class="code">
+                    <pre>
+    html: 
+    
+        &lt;p class="normal"&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore,praesentium. &lt;/p&gt;
+
+        &lt;p class="italic"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, recusandae? &lt;/p&gt;
+
+        &lt;p class="oblique"&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, veniam! &lt;/p&gt;
+                    </pre>
+                </div>
+                <div class="code">
+                    <pre>
+    CSS:
+
+        p.normal {
+          font-style: normal;
+        }
+
+        p.italic {
+          font-style: italic;
+        }
+
+        p.oblique {
+          font-style: oblique;
+        }
+                    </pre>
+                </div>
+                <h3>Result</h3>
+                <div class="code">
+                    <p style="font-style: normal;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Inventore,praesentium.</p>
+                    <p style="font-style:italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt,
+                        recusandae?</p>
+                    <p style="font-style: oblique;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit,
+                        veniam!</p>
+                </div>
+            </div>
+            <div>
+                <h2>
+                    Font Size:
+                </h2>
+                <p>
+                    The font-size property is used to set the size of font for the text content of an element. <br>
+                    There are several ways to specify the font size values e.g. with keywords, percentage, pixels, ems,
+                    etc. <br>
+                </p>
+                <h3>
+                    Setting Font Size with Pixels
+                </h3>
+                <p>
+                    Setting the font size in pixel values (e.g. 14px, 16px, etc.) is a good choice when you need the
+                    pixel accuracy. Pixel is an absolute unit of measurement which specifies a fixed length. <br>
+
+                    Let's try out the following example to understand how it basically works:
+                </p>
+                <h3>Example</h3>
+                <div class="code">
+                    <pre>
+    html:
+
+        &lt;h1 class="normal"&gt;Here the Font-size is 36px. &lt;/h1&gt;
+
+        &lt;p class="italic"&gt;Here the Font-size is 20px. &lt;/p&gt;
+                     </pre>
+                </div>
+                <div class="code">
+                    <pre>
+    CSS:
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+                    </pre>
+                </div>
+                <h3>Result</h3>
+                <div class="code">
+                    <h1 style="font-size: 36px;">Here the Font-size 36px.</h1>
+                    <p style="font-size: 20px;">Here the Font-size is 20px.</p>
+                </div>
+                <p>
+                    Defining the font sizes in pixel is not considered very accessible, because the user cannot change
+                    the font size from the browser settings. For instance, users with limited or low vision may wish to
+                    set the font size
+                    much
+                    larger than the
+                    size specified by you. <br> <br>
+                    Therefore, you should avoid using the pixels values and use the values that are relative to the
+                    user's
+                    default font size
+                    instead if you want to create an inclusive design.
+                </p>
+
+                <h3>Setting Font Size with EM</h3>
+                <p>The em unit refers to the font size of the parent element. When defining the font-size property, 1em
+                    is equal to the
+                    size of the font that applies to the parent of the element.
+                    <br>
+                    <br>
+                    So, if you set a font-size of 20px on the body element, then 1em = 20px and 2em = 40px. <br>
+
+                    However, if you haven't set the font size anywhere on the page, then it is the browser default,
+                    which is normally 16px.
+                    <br>
+                    <br>
+                    Therefore, by default 1em = 16px, and 2em = 32px.
+                    <br>
+                    Let's take a look at the following example to understand how it basically works:</p>
+                <h3>Example</h3>
+                <div class="code">
+                    <pre>
+    html:
+    
+        &lt;h1 class="normal"&gt;Here the Font-size 3em. &lt;/h1&gt;
+    
+        &lt;p class="italic"&gt;Here the Font-size is 2em &lt;/p&gt;
+
+                    </pre>
+                </div>
+                <div class="code">
+                    <pre>
+    CSS:
+    
+        h1 {
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 2em;
+        }
+                     </pre>
+                </div>
+                <h3>Result</h3>
+                <div class="code">
+                    <h1 style="font-size: 3em;">Here the Font-size 3em.</h1>
+                    <p style="font-size: 2em;">Here the Font-size is 2em.</p>
+                </div>
+
+            </div>
+            <div>
+                <h2>
+                    Font Weight:
+                </h2>
+                <p>
+                    The font-weight property specifies the weight or boldness of the font.
+                    <br><br>
+                    This property can take one of the following values: normal, bold, bolder, lighter, 100, 200, 300,
+                    400, 500, 600, 700,
+                    800, 900 and inherit.
+                <ul>
+                    <li>The numeric values 100-900 specify the font weights, where each number represents a weight
+                        greater
+                        than its predecessor.
+                        400 is same as normal & 700 is same as bold.</li>
+                    <li>The bolder and lighter values are relative to the inherited font weight, while the other values
+                        such
+                        as normal and bold
+                        are absolute font weights.</li>
+                </ul>
+
+
+
+                Let's try out an example to understand how this property basically works:
+                </p>
+                <h3>Example</h3>
+                <div class="code">
+                    <pre>
+    html:
+    
+        &lt;h2 style="font-weight: 800"&gt;Here the font-Weight is "800". &lt;/h2&gt;
+
+        &lt;h3 style="font-weight: 400"&gt;Here the font-Weight is "400". &lt;/h3&gt;
+                
+                    </pre>
+                </div>
+                <div class="code">
+                    <pre>
+    CSS:
+    
+        h2 {
+            font-weight:800;
+        }
+        
+        h3 {
+            font-weight:400;
+        }
+                    </pre>
+                </div>
+
+                <h3>Result</h3>
+                <div class="code">
+                    <h2 style="font-weight: 800">Here the font-Weight is "800". </h2>
+                    <h3 style="font-weight: 400">Here the font-Weight is "400". </h3>
+                </div>
+                <p>
+                    Most of the fonts are only available in a limited number of weights; often they are available only
+                    in normal and bold.
+                    In case, if a font is not available in the specified weight, an alternate will be chosen that is the
+                    closest available
+                    weight.
+                </p>
+
+            </div>
         </div>
 
         <div id="Display" class="tabcontent">
