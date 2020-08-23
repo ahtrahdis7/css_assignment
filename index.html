@@ -22,7 +22,7 @@
         <a class="tablinks" onclick="openProperty(event, 'Text Formatting')">Text Formatting</a>
         <a class="tablinks" onclick="openProperty(event, 'Display')">Display</a>
         <a class="tablinks" onclick="openProperty(event, 'Tables')">Tables</a>
-        <a class="tablinks" onclick="openProperty(event, 'Postion')">Postion</a>
+        <a class="tablinks" onclick="openProperty(event, 'Postion')">Postion and Dropdowns</a>
         <a class="tablinks" onclick="openProperty(event, 'Overflow')">Overflow</a>
         <a class="tablinks" onclick="openProperty(event, 'Image')">Image and Icons</a>
         <a class="tablinks" onclick="openProperty(event, 'Box Model')">Box Model</a>
@@ -978,10 +978,144 @@
                 </tr>
             </table>
         </div>
-
+         <!-- POSITION PROP -->
         <div id="Postion" class="tabcontent">
             <h1>Postion</h1>
-            <p>Cover "Dropdowns" and "attr selectors</p>
+
+            <h4>Position: static</h4>
+            <p style="position: static; border: solid 2px red; padding: 10px; background-color: rgb(233, 255, 255);">
+                This is a static element. <br>
+                An element with <i>position: static;</i> is not positioned in any special way; 
+                it is always positioned according to the normal flow of the page:
+            </p>
+
+            <h4>Position: relative</h4>
+            <p style="position: relative; border: solid 2px red; padding: 10px; background-color: rgb(233, 255, 255);">
+                This is a <i>position: relative</i> element<br>
+                An element with position: relative; is positioned relative to its normal position.
+                Setting the top, right, bottom, and left properties of a relatively-positioned 
+                element will cause it to be adjusted away from its normal position. 
+                Other content will not be adjusted to fit into any gap left by the element.
+            </p>
+
+            <h4>Position: fixed</h4>
+            <p style="border: solid 2px red; padding: 10px; background-color: rgb(233, 255, 255);">
+                The two UI components at the <i>bottom-right</i> and <i>top-right</i> corners are
+                fixed elements. 
+                <br>
+                An element with <i>position: fixed;</i> is positioned relative to the viewport, 
+                which means it always stays in the same place even if the page is scrolled. 
+                The top, right, bottom, and left properties are used to position the element.
+                A fixed element does not leave a gap in the page where it would normally have been located.
+            </p>
+
+            <h4>
+                Position: absolute
+            </h4>
+            <div style="position: relative; border: solid 2px red; padding: 10px; height: 250px; background-color: rgb(233, 255, 255);"> 
+                <p>
+                    <b>This < div> is an <i>position: relative</i>  </b><br>
+                    An element with <i>position: absolute;</i> is positioned relative to the nearest positioned ancestor 
+                    (instead of positioned relative to the viewport, like fixed).
+                </p>
+                <div style="position: absolute;
+                top: 80px;
+                right: 0;
+                margin: 30px;
+                width: 300px;
+                height: 100px;
+                padding: 5px;
+                border: 3px solid rgb(36,36,36);">
+                    <p>
+                        This < div> element has position: absolute;
+                    </p>
+                </div>
+            </div>
+
+            <h4>Position: sticky</h4>
+            <div style="border: solid red 2px; padding: 10px; background-color: rgb(233, 255, 255);" >
+                <p>
+                    An element with <b><i>position: sticky;</i></b> is positioned based on the user's scroll position.
+                    A sticky element toggles between relative and fixed, depending on the scroll position. 
+                    It is positioned relative until a given offset position is met in the viewport - 
+                    then it "sticks" in place (like position:fixed).
+                </p>
+                <div style="height: 300px; width: 50%; margin-left: 10px; margin-bottom: 10px; overflow: scroll; border: 2px solid rgb(36,36,36); padding: 10px;">
+                    <p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+                    <p>Note: IE/Edge 15 and earlier versions do not support sticky position.</p>
+                    
+                    <div class="sticky" style="position: -webkit-sticky;
+                    position: sticky;
+                    top: 0;
+                    padding: 5px;
+                    border: 2px solid white; 
+                    background-color: rgb(36,36,36);
+                    color: white;">I am sticky component!</div>
+    
+                    <div >
+                    <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+                    <p>Scroll back up to remove the stickyness.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <h1>Dropdowns</h1>
+            <p>The <i>dropdown</i> appears when you hover on the element</p>
+
+            <div class="dropdown">
+                <span>Hover over me</span>
+                <div class="dropdown-content" >
+                  <p>Link 1</p>
+                  <p>Link 2</p>
+                  <p>Link 3</p>
+
+                </div>
+              </div>
+            <div class="code">
+<pre>
+    HTML:
+    < div class="dropdown">
+        < span>Mouse over me< /span>
+        < div class="dropdown-content">
+            < p>Hello World!< /p>
+        < /div>
+    < /div>
+            </pre>
+            </div>
+
+            <div class="code">
+<pre>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+      
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+      
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</pre>
+            </div>
+            
+            
         </div>
 
         <div id="Overflow" class="tabcontent">
@@ -1004,33 +1138,49 @@
             <h2>Example</h2>
             <div class="code">
                 <pre>
-    html:
+    HTML:
         
-        &lt;h1&gt;You can use the overflow property when you want to have better control of the layout.<br> The overflow property specifies what happens if content overflows an element's box.&lt;h1&gt;
+    &lt;h1&gt;
+        You can use the overflow property when you want to have better control of the layout.
+        < br> 
+        The overflow property specifies what happens if content overflows an element's box.
+    &lt;h1&gt;
                             </pre>
             </div>
             <div class="code">
                 <pre>
     CSS:
-
-        div {
+    div {
         background-color: #eee;
         width: 200px;
         height: 100px;
         border: 1px dotted black;
         overflow: scroll;
-        }
+    }
                             </pre>
             </div>
             <h3>Result</h3>
-            <div class="code">
+            <div class="code" style="background-color: rgb(233, 255, 255);">
                 <h5 class="overflowresult">You can use the overflow property when you want to have better control of the
-                    layout. The overflow property specifies what happens if content overflows an element's box.</h1>
+                    layout. The overflow property specifies what happens if content overflows an element's box.
+                    You can use the overflow property when you want to have better control of the
+                    layout. The overflow property specifies what happens if content overflows an element's box.
+                    You can use the overflow property when you want to have better control of the
+                    layout. The overflow property specifies what happens if content overflows an element's box.
+                    You can use the overflow property when you want to have better control of the
+                    layout. The overflow property specifies what happens if content overflows an element's box.
+                    You can use the overflow property when you want to have better control of the
+                    layout. The overflow property specifies what happens if content overflows an element's box.
+                    You can use the overflow property when you want to have better control of the
+                    layout. The overflow property specifies what happens if content overflows an element's box.
+                    You can use the overflow property when you want to have better control of the
+                    layout. The overflow property specifies what happens if content overflows an element's box.
+                </h5>
             </div>
 
             <br>
             <p>P.S - You can try other overflow options just by changing it in div style tag.</p><br>
-            <div id="note" style="background: lightgray;">
+            <div id="note" style="background: lightgray; padding: 10px;">
                 <p style="color: red; font-weight: bold;">Note: The overflow property only works for block
                     elements
                     with a
@@ -1053,73 +1203,72 @@
             <h2>Example 1</h2>
             <div class="code">
                 <pre>
-        html:
-        
-        < div class="container">
-            < img src="img_avatar.png" alt="Avatar" class="image">
-            < div class="overlay">
-              < a href="#" class="icon" title="User Profile">
-                < i class="fa fa-user">< /i>
-              < /a>
-            < /div>
-          < /div>
+    HTML:
+    < div class="container">
+        < img src="img_avatar.png" alt="Avatar" class="image">
+        < div class="overlay">
+            < a href="#" class="icon" title="User Profile">
+            < i class="fa fa-user">< /i>
+            < /a>
+        < /div>
+    < /div>
                         </pre>
             </div>
             <div class="code">
                 <pre>
-        CSS:
+    CSS:
+    
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+    }
         
-        .container {
-            position: relative;
-            width: 100%;
-            max-width: 400px;
-          }
-          
-          /* Make the image to responsive */
-          .image {
-            width: 100%;
-            height: auto;
-          }
-          
-          /* The overlay effect (full height and width) - lays on top of the container and over the image */
-          .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: .3s ease;
-            background-color: red;
-          }
-          
-          /* When you mouse over the container, fade in the overlay icon*/
-          .container:hover .overlay {
-            opacity: 1;
-          }
-          
-          /* The icon inside the overlay is positioned in the middle vertically and horizontally */
-          .icon {
-            color: white;
-            font-size: 100px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            text-align: center;
-          }
-          
-          /* When you move the mouse over the icon, change color */
-          .fa-user:hover {
-            color: #eee;
-          }
+        /* Make the image to responsive */
+    .image {
+        width: 100%;
+        height: auto;
+    }
+        
+    /* The overlay effect (full height and width) - lays on top of the container and over the image */
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: red;
+    }
+        
+    /* When you mouse over the container, fade in the overlay icon*/
+    .container:hover .overlay {
+        opacity: 1;
+    }
+        
+    /* The icon inside the overlay is positioned in the middle vertically and horizontally */
+    .icon {
+        color: white;
+        font-size: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+        
+    /* When you move the mouse over the icon, change color */
+    .fa-user:hover {
+        color: #eee;
+    }
                         </pre>
             </div>
             <h3>Result</h3>
-            <div class="code">
+            <div class="code" style="background-color: rgb(233, 255, 255); padding: 10px;">
                 <style>
                     .container {
                         position: relative;
@@ -1188,25 +1337,25 @@
             <p>The CSS filter property adds visual effects (like blur and saturation) to an element.</p>
 
             <h2>Example 2</h2>
-            <div class="code">
-                <pre>
-        html:
-        < p>Apply a blur effect to the image:< /p>
-        < img src="images/gal1.jpg" alt="img_avatar" width="300" height="300">
-                        </pre>
+            <div class="code" >
+<pre>
+    HTML:
+    < p>Apply a blur effect to the image:< /p>
+    < img src="images/gal1.jpg" alt="img_avatar" width="300" height="300">
+</pre>
             </div>
             <div class="code">
                 <pre>
-        CSS:
-        
-        img {
-            -webkit-filter: blur(5px);
-            filter: blur(5px);
-          }
+    CSS:
+    
+    img {
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+    }
                         </pre>
             </div>
-            <h4>Result</h4>
-            <div class="code">
+            <h4>Result:</h4>
+            <div class="code" style="background-color: rgb(233, 255, 255); padding: 10px;">
                 <style>
                     .imgblur {
                         -webkit-filter: blur(5px);
@@ -1250,32 +1399,33 @@
             <br>
             <h2>Example 1</h2>
             <div class="code">
-                <pre>
-            html:
-            
-            < h2>Demonstrating the Box Model< /h2>
+<pre>
+    HTML:
 
-            < p>The CSS box model is essentially a box that wraps around every HTML element.<br> It consists of: borders, padding, margins, and the actual content.< /p>
-            
-            < div>This text is the content of the box. We have added a 50px padding ....< /div>
-            
-                            </pre>
+    < h2>Demonstrating the Box Model< /h2>
+    < p>
+        The CSS box model is essentially a box that wraps around every HTML element.
+        < br> 
+        It consists of: borders, padding, margins, and the actual content.
+    < /p>
+    < div>This text is the content of the box. We have added a 50px padding ....< /div>
+
+</pre>
             </div>
             <div class="code">
-                <pre>
-            CSS:
-            
-            div {
-                background-color: lightgrey;
-                width: 300px;
-                border: 15px solid green;
-                padding: 50px;
-                margin: 20px;
-              }
-                            </pre>
+<pre>
+    CSS:
+    div {
+        background-color: lightgrey;
+        width: 300px;
+        border: 15px solid green;
+        padding: 50px;
+        margin: 20px;
+    }
+</pre>
             </div>
             <h3>Result</h3>
-            <div class="code">
+            <div class="code" style="background-color: rgb(233, 255, 255); padding: 10px;">
                 <style>
                     .boxmodel {
                         background-color: lightgrey;
@@ -1310,7 +1460,7 @@
                                 + 0px (left + right margin)<br>
                                 = 350px</b>
                         </p>
-                        <p style="font-size: larger;">The total width of an element should be calculated like this:<br>
+                        <p>The total width of an element should be calculated like this:<br>
 
                             Total element width = width + left padding + right padding + left border + right border +
                             left margin + right margin<br>
@@ -1320,7 +1470,7 @@
                             Total element height = height + top padding + bottom padding + top border + bottom border +
                             top margin + bottom margin</p>
 
-                        <p style="font-size: larger; background: coral;"><B>Important: When you set the width and height
+                        <p style="font-size: large; background: coral; padding: 5px;"><B>Important: When you set the width and height
                                 properties of an element with CSS, you just set the width and height of the content
                                 area.<br> To calculate the full size of an element, you must also add padding, borders
                                 and margins.
@@ -1484,7 +1634,7 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
 
                         </pre>
                 <h3>Result</h3>
-                <div class="code">
+                <div class="code" style="background-color: rgb(233, 255, 255);">
                     <!DOCTYPE html>
                     <html>
 
@@ -1688,13 +1838,122 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
             </div>
         </div>
 
+        <!-- PSEUDO CLASS AND ELEMENTS -->
         <div id="PseudoClass" class="tabcontent">
             <h1>Pseudo Class and Elements</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto aut sequi nostrum,
-                commodi
-                officiis
-                sunt neque, sit aliquam mollitia odio nemo?</p>
+            <h4>Syntax: </h4>
+            <!-- CODE -->
+            <div class="code">
+<pre>
+    selector:pseudo-class {
+        property: value;
+    }
+</pre>
+            </div>
+            <h4>Example 1: Anchor Pseudo Classes</h4>
+            <!-- CODE -->
+            <div class="code">
+<pre>
+    a:visited {
+        property: value
+    }
+    a:link {
+        property: value
+    }
+    a:hover {
+        property: value
+    }
+    a:active {
+        property: value
+    }
+</pre>
+            </div>
+            <p style="background-color: antiquewhite; color:  red; padding: 5px">
+                Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective! 
+                a:active MUST come after a:hover in the CSS definition in order to be effective! Pseudo-class names 
+                are not case-sensitive.
+            </p>
+
+            <h4>Pseudo Classes and CSS classes combined</h4>
+            <!-- CODE -->
+            <div class="code">
+<pre>
+    selector.css_class:pseudo-class {
+        property: value
+    }
+</pre>
+            </div>
+
+            <h4>:first-child Pseudo-class</h4>
+            <!-- CODE -->
+            <div class="code">
+<pre>
+    CSS:
+    p:first-child {
+        color: red;
+    } 
+</pre>
+            </div>
+            <div class="code">
+<pre>
+    HTML:
+    &lt;p&gt;This is first Paragraph&lt;/p&gt;
+    &lt;p&gt;This is second Paragraph&lt;/p&gt;
+</pre>
+            </div>
+            <h4>Result:</h4>
+            <div class="firstChild code" style="background-color: rgb(233, 255, 255); padding: 10px">
+                <p>This is first Paragraph</p>
+                <p>This is second Paragraph</p>
+            </div>
+
+            <h4>:lang pseudo class</h4>
+            <!-- CODE -->
+            <div class="code">
+<pre>
+    CSS:
+    q:lang(no) {
+        quotes: "~" "~";
+    }
+</pre>
+            </div>
+            <div class="code">
+<pre>
+    HTML:
+    &lt;p&gt;Some text &lt;q lang="no"&gt;A quote in a paragraph&lt;/q&gt; Some text.&lt;/p&gt;
+</pre>
+            </div>
+            <h4>Result:</h4>
+            <div class="lang code" style="background-color: rgb(233, 255, 255);">
+                <p> some texts in the paragraph <q lang="no">This is a quote is a paragraph</q> some texts in the paragraph </p>
+            </div>
+
+            <!-- code -->
+            <div class="code">
+<pre>
+    CSS:
+    p i:first-child{
+        color: blue;
+    }
+</pre>
+            </div>
+            <div class="code">
+<pre>
+    HTML:
+    &lt;p&gt;I am a &lt;i&gt;strong&lt;/i&gt; person. I am a &lt;i&gt;strong&lt;/i&gt; person.&lt;/p&gt;
+    &lt;p&gt;I am a &lt;i&gt;strong&lt;/i&gt; person. I am a &lt;i&gt;strong&lt;/i&gt; person.&lt;/p&gt;
+</pre>
+            </div>
+
+            <h4>Result:</h4>
+            <div class="ifirst code" style="background-color: rgb(233, 255, 255);">
+                <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+                <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+            </div>
+
         </div>
+
+        <!-- FORMS -->
         <div id="Forms" class="tabcontent">
             <h1>Forms</h1>
 
@@ -1715,68 +1974,68 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
                 </li>
             </ul>
             <h3>Code:</h3>
-            <h4>CSS:</h4>
             <div class="code">
-                <xmp>
-                    .formbody{
-                    padding: 1cm;
-                    align-items: center;
-                    font-family: 'Comic Neue', cursive;
-                    background-color: #1e3f5a;
-                    background-image: url('https://rb.gy/wcrqyy');
-                    }
-                    .inputform{
-                    width: 10.5cm;
-                    height: 1cm;
-                    font-size: large;
-                    font-family: 'Courier New', Courier, monospace;
-                    }
-                    .formMain{
-                    border: 1px solid black;
-                    padding: 1cm;
-                    opacity: 1;
-                    background-color: white;
-                    color: black;
-                    opacity: 0.8;
-                    font-size: 20px;
-                    width: 50%;
-                    }
-                </xmp>
+<pre>
+    CSS:
+    .formbody{
+        padding: 1cm;
+        align-items: center;
+        font-family: 'Comic Neue', cursive;
+        background-color: #1e3f5a;
+        background-image: url('https://rb.gy/wcrqyy');
+    }
+    .inputform{
+        width: 10.5cm;
+        height: 1cm;
+        font-size: large;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .formMain{
+        border: 1px solid black;
+        padding: 1cm;
+        opacity: 1;
+        background-color: white;
+        color: black;
+        opacity: 0.8;
+        font-size: 20px;
+        width: 50%;
+    }
+</pre>
             </div>
-            <h4>HTML:</h4>
             <div class="code">
-                <xmp>
-                    <form class="formMain" action="#" method="POST">
-                        <!-- Text Input -->
-                        <label for="name">Name</label><br>
-                        <input type="text" name="name" id="text" placeholder="name"><br><br>
-                        <!-- Radio Button -->
-                        <label>Gender</label><br>
-                        <input type="radio" id="gender" name="gender" value="male">
-                        <label for="male">Male</label><br>
-                        <input type="radio" id="gender" name="gender" value="female">
-                        <label for="female">Female</label><br>
-                        <input type="radio" id="gender" name="gender" value="other">
-                        <label for="other">Other</label><br><br>
-                        <!-- Dropdown -->
-                        <label for="branch">Choose Your Branch:</label>
-                        <select id="branch" name="branch">
-                            <option value="CSE">CSE</option>
-                            <option value="IT">IT</option>
-                            <option value="CE">CE</option>
-                            <option value="ETC">ETC</option>
-                            <option value="EEE">EEE</option>
-                        </select><br><br>
-                        <!-- Checkbox -->
-                        <label>Select your Choice of Clubs in Tech Soc</label><br>
-                        <input type="checkbox" id="checkbox" name="psoc" value="tech">
-                        <label for="Tech"> Programming Society</label><br>
-                        <input type="checkbox" id="checkbox" name="tars" value="cultural">
-                        <label for="cultural"> Robotics Society</label><br>
-                        <input style="align-self: center; width: 2cm; color:
-                              brown; background-color: rgb(255, 255, 255);" type="submit" placeholder="SUBMIT">
-                    </form>
-                </xmp>
+<pre>
+    HTML:
+    &lt;form class="formMain" action="#" method="POST"&gt;
+        &lt;!-- Text Input --&gt;
+        &lt;label for="name"&gt;Name&lt;/label&gt;&lt;br&gt;
+        &lt;input type="text" name="name" id="text" placeholder="name"&gt;&lt;br&gt;&lt;br&gt;
+        &lt;!-- Radio Button --&gt;
+        &lt;label&gt;Gender&lt;/label&gt;&lt;br&gt;
+        &lt;input type="radio" id="gender" name="gender" value="male"&gt;
+        &lt;label for="male"&gt;Male&lt;/label&gt;&lt;br&gt;
+        &lt;input type="radio" id="gender" name="gender" value="female"&gt;
+        &lt;label for="female"&gt;Female&lt;/label&gt;&lt;br&gt;
+        &lt;input type="radio" id="gender" name="gender" value="other"&gt;
+        &lt;label for="other"&gt;Other&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+        &lt;!-- Dropdown --&gt;
+        &lt;label for="branch"&gt;Choose Your Branch:&lt;/label&gt;
+        &lt;select id="branch" name="branch"&gt;
+            &lt;option value="CSE"&gt;CSE&lt;/option&gt;
+            &lt;option value="IT"&gt;IT&lt;/option&gt;
+            &lt;option value="CE"&gt;CE&lt;/option&gt;
+            &lt;option value="ETC"&gt;ETC&lt;/option&gt;
+            &lt;option value="EEE"&gt;EEE&lt;/option&gt;
+        &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+        &lt;!-- Checkbox --&gt;
+        &lt;label&gt;Select your Choice of Clubs in Tech Soc&lt;/label&gt;&lt;br&gt;
+        &lt;input type="checkbox" id="checkbox" name="psoc" value="tech"&gt;
+        &lt;label for="Tech"&gt; Programming Society&lt;/label&gt;&lt;br&gt;
+        &lt;input type="checkbox" id="checkbox" name="tars" value="cultural"&gt;
+        &lt;label for="cultural"&gt; Robotics Society&lt;/label&gt;&lt;br&gt;
+        &lt;input style="align-self: center; width: 2cm; color:
+                brown; background-color: rgb(255, 255, 255);" type="submit" placeholder="SUBMIT"&gt;
+    &lt;/form&gt;
+</pre>
             </div>
             <h3>Results:</h3>
             <div class="formbody">
@@ -1823,44 +2082,46 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
             <P>We will see how to make an Image Gallery using the above discussed properties</P>
 
             <h3>HTML and CSS for the gallery shown below</h3><br>
-            <h3>Code:</h3>
+            <!-- <h3>Code:</h3> -->
             <div class="code">
-                <xmp>
-                    <style>
-                        .galleryImage {
-                            width: 250px;
-                            height: 250px;
-                            margin-left: 2px;
-                            margin-right: 2px;
-                        }
+<pre>
+    CSS:
+    .galleryImage {
+        width: 250px;
+        height: 250px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
 
-                        .gallery {
-                            float: left;
-                        }
+    .gallery {
+        float: left;
+    }
 
-                        .imagelink:hover {
-                            opacity: 0.6;
-                        }
-                    </style>
-
-
-                    <div class="gallery">
-                        <a href="images/gal1.jpg" class="imagelink">
-                            <img src="images/gal1.jpg" class="galleryImage">
-                        </a>
-                    </div>
-                    <div class="gallery">
-                        <a href="images/gal2.jpg" class="imagelink">
-                            <img src="images/gal2.jpg" class="galleryImage">
-                        </a>
-                    </div>
-                    <div class="gallery">
-                        <a href="images/gal3.jpg" class="imagelink">
-                            <img src="images/gal3.jpg" class="galleryImage">
-                        </a>
-                    </div>
-                </xmp>
+    .imagelink:hover {
+        opacity: 0.6;
+    }
+</pre>
             </div><br>
+            <div class="code">
+<pre>
+    HTML:
+    &lt;div class="gallery"&gt;
+        &lt;a href="images/gal1.jpg" class="imagelink"&gt;
+            &lt;img src="images/gal1.jpg" class="galleryImage"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="gallery"&gt;
+        &lt;a href="images/gal2.jpg" class="imagelink"&gt;
+            &lt;img src="images/gal2.jpg" class="galleryImage"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="gallery"&gt;
+        &lt;a href="images/gal3.jpg" class="imagelink"&gt;
+            &lt;img src="images/gal3.jpg" class="galleryImage"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+</pre>
+            </div>
             <h3>Result:</h3><br>
             <div>
                 <div class="gallery">
