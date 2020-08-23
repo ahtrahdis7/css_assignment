@@ -31,6 +31,7 @@
         <a class="tablinks" onclick="openProperty(event, 'PseudoClass')">Pseudo Class</a>
         <a class="tablinks" onclick="openProperty(event, 'Forms')">Forms</a>
         <a class="tablinks" onclick="openProperty(event, 'ImageGallery')">Image Gallery</a>
+        <a class="tablinks" onclick="openProperty(event, 'Quiz')">Quiz</a>
         <a class="tablinks" onclick="openProperty(event, 'Test')">Test Yourself</a>
     </div>
     <div class="main">
@@ -983,14 +984,14 @@
             <h1>Postion</h1>
 
             <h4>Position: static</h4>
-            <p style="position: static; border: solid 2px red; padding: 10px; background-color: rgb(233, 255, 255);">
+            <p style="position: static; border: solid 2px red; padding: 10px; background-color: rgb(245, 255, 255);">
                 This is a static element. <br>
                 An element with <i>position: static;</i> is not positioned in any special way; 
                 it is always positioned according to the normal flow of the page:
             </p>
 
             <h4>Position: relative</h4>
-            <p style="position: relative; border: solid 2px red; padding: 10px; background-color: rgb(233, 255, 255);">
+            <p style="position: relative; border: solid 2px red; padding: 10px; background-color: rgb(245, 255, 255);">
                 This is a <i>position: relative</i> element<br>
                 An element with position: relative; is positioned relative to its normal position.
                 Setting the top, right, bottom, and left properties of a relatively-positioned 
@@ -999,7 +1000,7 @@
             </p>
 
             <h4>Position: fixed</h4>
-            <p style="border: solid 2px red; padding: 10px; background-color: rgb(233, 255, 255);">
+            <p style="border: solid 2px red; padding: 10px; background-color: rgb(245, 255, 255);">
                 The two UI components at the <i>bottom-right</i> and <i>top-right</i> corners are
                 fixed elements. 
                 <br>
@@ -1012,7 +1013,7 @@
             <h4>
                 Position: absolute
             </h4>
-            <div style="position: relative; border: solid 2px red; padding: 10px; height: 250px; background-color: rgb(233, 255, 255);"> 
+            <div style="position: relative; border: solid 2px red; padding: 10px; height: 250px; background-color: rgb(245, 255, 255);"> 
                 <p>
                     <b>This < div> is an <i>position: relative</i>  </b><br>
                     An element with <i>position: absolute;</i> is positioned relative to the nearest positioned ancestor 
@@ -1033,7 +1034,7 @@
             </div>
 
             <h4>Position: sticky</h4>
-            <div style="border: solid red 2px; padding: 10px; background-color: rgb(233, 255, 255);" >
+            <div style="border: solid red 2px; padding: 10px; background-color: rgb(245, 255, 255);" >
                 <p>
                     An element with <b><i>position: sticky;</i></b> is positioned based on the user's scroll position.
                     A sticky element toggles between relative and fixed, depending on the scroll position. 
@@ -1160,7 +1161,7 @@
                             </pre>
             </div>
             <h3>Result</h3>
-            <div class="code" style="background-color: rgb(233, 255, 255);">
+            <div class="code" style="background-color: rgb(245, 255, 255);">
                 <h5 class="overflowresult">You can use the overflow property when you want to have better control of the
                     layout. The overflow property specifies what happens if content overflows an element's box.
                     You can use the overflow property when you want to have better control of the
@@ -1268,7 +1269,7 @@
                         </pre>
             </div>
             <h3>Result</h3>
-            <div class="code" style="background-color: rgb(233, 255, 255); padding: 10px;">
+            <div class="code" style="background-color: rgb(245, 255, 255); padding: 10px;">
                 <style>
                     .container {
                         position: relative;
@@ -2167,6 +2168,124 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
             </div>
 
 
+        </div>
+
+        <div id="Quiz" class="tabcontent">
+            <h1>Quizzes</h1>
+            <ol>
+                <li>
+                    <p>What property do you use to create spacing between HTML elements?</p>
+                    <input type="radio" id="1" name="1" value="margin">
+                    <label for="1">margin</label><br>
+                    <input type="radio" id="1" name="1" value="spacing">
+                    <label for="1">spacing</label><br>
+                    <input type="radio" id="1" name="1" value="padding">
+                    <label for="1">padding</label><br>
+                    <input type="radio" id="1" name="1" value="border">
+                    <label for="1">border</label><br>
+                </li>
+                <li>
+                    <p>For users that use the tab key to navigate websites, 
+                        what property shows moving from one element to another using this behavior?</p>
+                    <input type="radio" id="2" name="2" value="a:link">
+                    <label for="2">a:link</label><br>
+                    <input type="radio" id="2" name="2" value="a:active">
+                    <label for="2">a:active</label><br>
+                    <input type="radio" id="2" name="2" value="a:focus">
+                    <label for="2">a:focus</label><br>
+                    <input type="radio" id="2" name="2" value="a:visited">
+                    <label for="2">a:visited</label><br>
+                </li>
+                <li>
+                    <p>What is the property used to set the class’s text color?</p>
+                    <input type="radio" id="3" name="3" value="text-color">
+                    <label for="3">text-color</label><br>
+                    <input type="radio" id="3" name="3" value=" text:color">
+                    <label for="3"> text:color</label><br>
+                    <input type="radio" id="3" name="3" value="color">
+                    <label for="3">color</label><br>
+                    <input type="radio" id="3" name="3" value="font-color">
+                    <label for="3">font-color</label><br>
+                </li>
+                <li>
+                    <p>The acronym CSS stands for what?</p>
+                    <input type="radio" id="4" name="4" value="Cascading Style Sheets">
+                    <label for="4">Cascading Style Sheets</label><br>
+                    <input type="radio" id="4" name="4" value="Carrot Sytem Style">
+                    <label for="4">Carrot Sytem Style</label><br>
+                    <input type="radio" id="4" name="4" value=" Correlated Styling System">
+                    <label for="4"> Correlated Styling System</label><br>
+                    <input type="radio" id="4" name="4" value="Canvas Styling System">
+                    <label for="4">Canvas Styling System</label><br>
+                </li>
+                <li>
+                    <p>What property would you use to change the list style to show roman numerals instead of normal numbers?</p>
+                    <input type="radio" id="5" name="5" value="list-style-type:upper-roman;">
+                    <label for="5">list-style-type:upper-roman;</label><br>
+                    <input type="radio" id="5" name="5" value=" list-type:roman;">
+                    <label for="5"> list-type:roman;</label><br>
+                    <input type="radio" id="5" name="5" value="list-bullet-type:roman-numerals;">
+                    <label for="5">list-bullet-type:roman-numerals;</label><br>
+                    <input type="radio" id="5" name="5" value="list-style:roman;">
+                    <label for="5">list-style:roman;</label><br>
+                </li>
+                <li>
+                    <p>What property would you use to create space between the element’s border and inner content?</p>
+                    <input type="radio" id="6" name="6" value="margin">
+                    <label for="6">margin</label><br>
+                    <input type="radio" id="6" name="6" value="spacing">
+                    <label for="6">spacing</label><br>
+                    <input type="radio" id="6" name="6" value="padding">
+                    <label for="6">padding</label><br>
+                    <input type="radio" id="6" name="6" value="border">
+                    <label for="6">border</label><br>
+                </li>
+                <li>
+                    <p>In what way can you NOT reference CSS?</p>
+                    <input type="radio" id="7" name="7" value="Inline Styling">
+                    <label for="7">Inline Styling</label><br>
+                    <input type="radio" id="7" name="7" value="Internal Style Sheet">
+                    <label for="7">Internal Style Sheet</label><br>
+                    <input type="radio" id="7" name="7" value="External Style Sheet">
+                    <label for="7">External Style Sheet</label><br>
+                    <input type="radio" id="7" name="7" value="All three are correct">
+                    <label for="7">All three are correct</label><br>
+                </li>
+                <li>
+                    <p>What property can you use to set the spacing in between lines of text?</p>
+                    <input type="radio" id="8" name="8" value="line-spacing">
+                    <label for="8">line-spacing</label><br>
+                    <input type="radio" id="8" name="8" value=" line-height">
+                    <label for="8"> line-height</label><br>
+                    <input type="radio" id="8" name="8" value="spacing">
+                    <label for="8">spacing</label><br>
+                    <input type="radio" id="8" name="8" value="letter-spacing">
+                    <label for="8">letter-spacing</label><br>
+                </li>
+                <li>
+                    <p>What property do you use to set the background color of an image?</p>
+                    <input type="radio" id="9" name="9" value="color">
+                    <label for="9">color</label><br>
+                    <input type="radio" id="9" name="9" value="background-color">
+                    <label for="9">background-color</label><br>
+                    <input type="radio" id="9" name="9" value="background:color">
+                    <label for="9">background:color</label><br>
+                    <input type="radio" id="9" name="9" value="color:background">
+                    <label for="9"> color:background</label><br>
+                </li>
+                <li>
+                    <p>What is the worst way to style an element using CSS?</p>
+                    <input type="radio" id="10" name="10" value="Inline Styling">
+                    <label for="10">Inline Styling</label><br>
+                    <input type="radio" id="10" name="10" value="Internal Style Sheet">
+                    <label for="10">Internal Style Sheet</label><br>
+                    <input type="radio" id="10" name="10" value="External Style Sheet">
+                    <label for="10">External Style Sheet</label><br>
+                    <input type="radio" id="10" name="10" value="All three are great ways to reference CSS">
+                    <label for="10">All three are great ways to reference CSS</label><br>
+                </li>
+                
+            </ol>
         </div>
 
 
