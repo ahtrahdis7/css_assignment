@@ -31,6 +31,7 @@
         <a class="tablinks" onclick="openProperty(event, 'PseudoClass')">Pseudo Class</a>
         <a class="tablinks" onclick="openProperty(event, 'Forms')">Forms</a>
         <a class="tablinks" onclick="openProperty(event, 'ImageGallery')">Image Gallery</a>
+        <a class="tablinks" onclick="openProperty(event, 'htmleditor')">Editor</a>
         <a class="tablinks" onclick="openProperty(event, 'Quiz')">Quiz</a>
         <a class="tablinks" onclick="openProperty(event, 'Test')">Test Yourself</a>
     </div>
@@ -2125,6 +2126,84 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
                         placeholder="SUBMIT">
                 </form>
             </div>
+        </div>
+        <!-- Editor -->
+
+        <div id="htmleditor" class="tabcontent">
+            <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet"> 
+
+            <style>
+                #editor-div{
+                    height: 400px;
+                    width: 100%;
+                    margin-right: 18%;
+                    margin-bottom: 10%;
+                    margin-top: 5%;
+                    font-size: 30px;
+                }
+        
+                #preview{
+                    border: 1px solid rgb(36,36,36);
+                    background-color: rgb(245, 255, 255);
+                    height: 400px;
+                    width: 100%;
+                    margin-right: 18%;
+                    margin-top: 10%;
+                    padding: 5px;
+                    overflow: scroll;
+                }
+
+                h5.renderbtn:hover {
+                    background-color: white;
+                    color: rgb(36,36,36);
+                }
+                
+            </style>
+
+            <div id="editor-div">
+                <div id="editor">
+                    <p>Hello World!</p>
+                </div>
+                <input style="align-self: center; 
+                width: 3cm; height: 1cm; 
+                border-radius: 3px;
+                color: white; 
+                background-color: green; 
+                opacity: 1; " type="submit"
+                value="SUBMIT" onclick="onclickpreview()">
+                
+                <input style="align-self: center; 
+                width: 3cm; height: 1cm; 
+                border-radius: 3px;
+                color: white; 
+                background-color:Red; 
+                opacity: 1; " type="submit"
+                value="RESET" onclick="reset()">
+            </div>
+            <!-- <h3>Preview</h3><br> -->
+            <div id="preview" >
+                <p>Write HTML and Click RENDER to show preview</p>
+            </div>
+            <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+
+            <script>
+                var editor = new Quill('#editor', {
+                    theme: 'snow'
+                });
+        
+                function onclickpreview(){
+                    var editor_content = editor.getText();
+                    console.log(editor_content);
+                    var preview = document.getElementById("preview")
+                    console.log(preview.innerHTML)
+                    preview.innerHTML = editor_content;
+                }
+
+                function reset(){
+                    var element = document.getElementsByClassName("ql-editor");
+                    element[0].innerHTML = "";      
+                }
+            </script> 
         </div>
 
         <!-- IMAGE GALLERY SECTION -->
