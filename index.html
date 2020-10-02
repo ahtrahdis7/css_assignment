@@ -7,7 +7,16 @@
     <title>CSS tutorial</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: 'Comic Neue', cursive;
+}
+body.dark-theme {
+  color: #eee;
+  background: #121212;
+}
 
+</style>
 </head>
 
 <body>
@@ -16,6 +25,7 @@
 
     <div class="tab sidenav">
         <img src='images/IIIT-BH_Official_Logo.png' style="width: 100%;  text-align: center;">
+        <a class="btn-toggle">Dark-Mode</a>
         <a class="tablinks" onclick="openProperty(event, 'Home')" id="defaultOpen">Home</a>
         <a class="tablinks" onclick="openProperty(event, 'Syntax')">Syntax</a>
         <a class="tablinks" onclick="openProperty(event, 'Background')">Background</a>
@@ -38,12 +48,13 @@
     <div class="main">
 
         <div id="Home" class="tabcontent home">
-            <h1><b>Welcome to CSS Tutorial!</b> <br> Let's have some fun</h1>
+            <h1 style="color:blue;"><b>Welcome to CSS Tutorial!<br>Let's have some fun</b></h1>
             <img class="homeimg" src='images/home.jpg' width="100%" height="800px">
             <div style="bottom: 0;position: absolute; padding: 40px; padding-bottom: 50px; color: white;">
                 <h4 style="text-align: left;">
                     What's in it for you ?
                 </h4>
+
                 <ul style="text-align: left;">
                     <li>Detailed Description of Individual Sections with Appropriate Examples</li>
                     <li>Made CSS Simple for Beginners</li>
@@ -54,7 +65,7 @@
                 <h1 style="text-align: left;color: white;">IWT ASSIGNMENT</h1>
                 <P style="text-align: left;">Assigned by- Prof. Bharati Mishra</P>
                 <h4 style="text-align: left;">Submitted By :</h4>
-                <ul style="text-align: left;">
+                <ul style="text-align: left;list-style-type:square;">
                     <li>
                         <p>Saidatta Sahu     [B118051]</p>
                     </li>
@@ -65,8 +76,7 @@
                         <p>Subham Hazra      [B118057]</p>
                     </li>
                 </ul>
-                
-                
+                         
             </div>
         </div>
 
@@ -2417,7 +2427,7 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
 
         <!-- TEST YOURSELF SECTION -->
         <div id="Test" class="tabcontent">
-            <h1>Test Yourself</h1>
+            <h1 style="color:blue;">Test Yourself</h1>
             <h3>Problem Statement:</h3>
             <h4 style="margin-bottom: 50px;">
                 Make an Exact Layout Of the UI provided below with a transistion from Page 1 to Page2 upon
@@ -2432,7 +2442,7 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
 
             <p>
                 <b>Tips for assesment:</b>
-            <ol>
+            <ol type="I">
                 <li>Make sure the UI is made responsive.</li>
                 <li>A dropdown Menu for Nav-Items in Mobile View.</li>
                 <li>The theme of all the components made same.</li>
@@ -2442,7 +2452,7 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
 
             <p>
                 <b>You can also try to:</b>
-            <ol>
+            <ol type="I">
                 <li>Make a photography portfolio using images from unsplash API.</li>
                 <li>Make your own portfolio website and host it using Github Pages.</li>
                 <li>Make your College Website and along with individual Clubs and Societies Website compiled
@@ -2472,6 +2482,11 @@ JSON, like XML, is a text-based format that's easy to write and easy to understa
             evt.currentTarget.className += " active";
         }
         document.getElementById("defaultOpen").click();
+        const btn = document.querySelector(".btn-toggle");
+
+btn.addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+});
     </script>
 
 </body>
